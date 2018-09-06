@@ -1,13 +1,13 @@
 # Project Name
 
-> Project description
+> Betterbnb
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Betterbnb/description.git
+  - https://github.com/Betterbnb/gallery.git
+  - https://github.com/Betterbnb/reviews.git
+  - https://github.com/Betterbnb/booking.git
 
 ## Table of Contents
 
