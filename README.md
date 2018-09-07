@@ -33,7 +33,13 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+npm install -g webpack
+
+npm run react-dev
+npm install --save-dev jest
+npm install express
+// npm install lorem-ipsum
+
 ```
 
