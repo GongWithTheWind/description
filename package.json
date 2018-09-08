@@ -1,17 +1,47 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "description_module",
+  "description": "Betterbnb",
+  "author": "J Huynh",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "react-dev": "webpack -d --watch"
   },
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.13",
+    "node-mongo-seeds": "^3.1.0",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "lorem-ipsum": "^1.0.6",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "version": "1.0.0",
+  "main": "./client/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Betterbnb/Description.git"
+  },
+  "keywords": [
+    "description"
+  ],
+  "bugs": {
+    "url": "https://github.com/Betterbnb/Description/issues"
+  },
+  "homepage": "https://github.com/Betterbnb/Description#readme"
 }

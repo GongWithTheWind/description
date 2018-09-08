@@ -1,13 +1,13 @@
 # Project Name
 
-> Project description
+> Betterbnb
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Betterbnb/description.git
+  - https://github.com/Betterbnb/gallery.git
+  - https://github.com/Betterbnb/reviews.git
+  - https://github.com/Betterbnb/booking.git
 
 ## Table of Contents
 
@@ -33,7 +33,19 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+npm install -g webpack
+npm install -g node-mongo-seeds
+
+npm run react-dev
+npm install --save-dev jest
+npm install express
+// npm install lorem-ipsum
+
+Generate fake data:
+node ./data/description_data_generator.js
+
+Seed data:
+seed
 ```
 
