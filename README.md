@@ -35,11 +35,17 @@ From within the root directory:
 ```sh
 npm install
 npm install -g webpack
+npm install -g node-mongo-seeds
 
 npm run react-dev
 npm install --save-dev jest
 npm install express
 // npm install lorem-ipsum
 
+Generate fake data:
+node ./data/description_data_generator.js
+
+Seed data:
+seed
 ```
 

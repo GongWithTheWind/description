@@ -1,8 +1,18 @@
 // Betterbnb Description Module Data Generator
-// By: Jenn Huynh
 
 const loremIpsum = require('lorem-ipsum');
 const fs = require('fs');
+
+// Media url paths
+const media = {
+  owners: [
+    'https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg',
+    'https://s3-us-west-1.amazonaws.com/betterbnb-description/person2.jpeg',
+    'https://s3-us-west-1.amazonaws.com/betterbnb-description/person3.jpeg',
+    'https://s3-us-west-1.amazonaws.com/betterbnb-description/person4.jpeg',
+    'https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg'
+  ]
+}
 
 // Data Selection
 const names = ['Quaint home by the Sea', 'Romantic Cabana', 'Designer Loft', 'Dream Getaway', 'Modern, chic home'];
@@ -60,14 +70,14 @@ const amenity_selection = {
   facilities: ['washer', 'dryer', 'pool', 'jacuzzi', 'gym'],
   dining: ['breakfast','coffee/tea','grill','pizza oven'],
   safety: ['smoke detector', 'carbon monoxide detector', 'first aid kit', 'safety card', 'fire extinguisher']
-};
+}
 
 const owners = {
   name: ['Joe & Pete', 'Olivia', 'Michaelangelo', 'Jin-Sun Choi', 'Hillary'],
-  image: ['url', 'url', 'url', 'url', 'url'],
+  image: media.owners,
   contact: ['jpjohnson@gmail.com', 'graham@yahoo.com', 'ktnolan@gmail.com', 'bethany2@gmail.com', 'tom@gmail.com'],
   badge: [true, false]
-};
+}
 
 const randomize = (array, randomizeQuantity) => {
   let result = new Set;
@@ -120,7 +130,7 @@ const generateHouse = (home_id) => {
       basics: randomize(amenity_selection.basics, true),
       facilities: randomize(amenity_selection.facilities, true),
       dining: randomize(amenity_selection.dining, true),
-      badge: randomize(amenity_selection.safety)
+      safety: randomize(amenity_selection.safety)
     },
     owner: {
       name: randomize(owners.name),
@@ -129,7 +139,7 @@ const generateHouse = (home_id) => {
       badge: randomize(owners.badge)
     }
   }
-};
+}
 
 const generateHouses = (quantity, start_index) => {
   let houses = [];
@@ -143,10 +153,12 @@ const generateHouses = (quantity, start_index) => {
 const data = generateHouses(100, 100);
 
 const generateDataFile = () => {
-  fs.writeFile('./description_data.js', data, (err) => {
-    if (err) { console.log('Error saving data.'); }
-    console.log('Data file created.');
+  fs.writeFile(__dirname + '/seeds/description_data.json', JSON.stringify(data), 'utf8', (err) => {
+    if (err) { console.log(err); }
+    else {
+      console.log('Data file created.');
+    }
   });
 }
 
-module.exports.generateData = generateDataFile;
+generateDataFile();
