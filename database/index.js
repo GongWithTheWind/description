@@ -14,8 +14,8 @@ const descriptionSchema = new mongoose.Schema({
   location: String,
   guests: Number,
   beds: {
-    'bedrooms': Array,
-    'common space': Array
+    bedrooms: Array,
+    commonSpace: Array
   },
   bathrooms: Number,
   mini_ad: {
@@ -29,11 +29,11 @@ const descriptionSchema = new mongoose.Schema({
     notHelpful: Number
   },
   description: {
-    'general': String,
-    'the space': String,
-    'guest access': String,
-    'interaction with guests': String,
-    'other things': String
+    general: String,
+    theSpace: String,
+    guestAccess: String,
+    interactionWithGuests: String,
+    otherThings: String
   },
   amenities: {
     basics: Array,
@@ -51,4 +51,8 @@ const descriptionSchema = new mongoose.Schema({
 
 const Description = mongoose.model('Description', descriptionSchema);
 
-module.exports = db;
+let retrieve = (homeId) => {
+  Description.find({ homeId: homeId }, callback);
+};
+
+module.exports.retrieve = retrieve;
