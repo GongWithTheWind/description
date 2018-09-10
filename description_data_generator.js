@@ -17,26 +17,26 @@ const media = {
 // Data Selection
 const names = ['Quaint home by the Sea', 'Romantic Cabana', 'Designer Loft', 'Dream Getaway', 'Modern, chic home'];
 
-const property_types = ['house', 'bungalow', 'cabin', 'casa particular', 
+const propertyTypes = ['house', 'bungalow', 'cabin', 'casa particular', 
   'chalet', 'cottage', 'cycladic house', 'dammuso', 'dome house', 'earth house', 
   'farmstay', 'house boat', 'hut', 'lighthouse', 'pension', 'shepherd’s hut', 
   'tiny house', 'townhouse', 'trullo', 'villa'];
 
 const locations = ['Kansas, USA', 'Cordoba, Argentina', 'Mandalay, Myanmar', 'Nagpur, India', 'Chungdu, China'];
 
-const guest_quantity = [];
+const guestQuantity = [];
 for (let i = 1; i <= 16; i++) {
-  guest_quantity.push(i);
+  guestQuantity.push(i);
 }
 
 const beds = ['king', 'queen', 'double', 'twin', 'floor mattress', 'futon', 'couch'];
 
-const bathroom_quantity = [];
+const bathroomQuantity = [];
 for (let i = 1; i <= 16; i++) {
-  bathroom_quantity.push(i);
+  bathroomQuantity.push(i);
 }
 
-const mini_ads = [
+const miniAds = [
   {
     title: 'This home is on people’s minds.',
     description: 'It’s been viewed 500+ times in the past week.'
@@ -51,7 +51,7 @@ const highlights = [
   { title: 'Hot tub', description: 'This is one of few homes in this area that has this feature.', helpful: 0, notHelpful: 0 }
 ];
 
-const amenity_selection = {
+const amenitySelection = {
   basics: [
     'essentials (towels, bedsheets, soap, toilet paper, pillows)',
     'wifi',
@@ -105,32 +105,32 @@ const generateRandomTextBlocks = () => {
   });
 }
 
-const generateHouse = (home_id) => {
+const generateHouse = (homeId) => {
   return {
-    home_id: home_id,
+    homeId: homeId,
     name: randomize(names),
-    property_type: randomize(property_types),
+    propertyType: randomize(propertyTypes),
     location: randomize(locations),
-    guests: randomize(guest_quantity),
+    guests: randomize(guestQuantity),
     beds: {
-      'bedrooms': [randomize(beds, true), randomize(beds, true)],
-      'common space': randomize(beds, true)
+      bedrooms: [randomize(beds, true), randomize(beds, true)],
+      commonSpace: randomize(beds, true)
     },
-    bathrooms: randomize(bathroom_quantity),
-    mini_ad: randomize(mini_ads),
+    bathrooms: randomize(bathroomQuantity),
+    miniAd: randomize(miniAds),
     highlights: randomize(highlights, true),
     description: {
-      'general': generateRandomTextBlocks(),
-      'the space': generateRandomTextBlocks(),
-      'guest access': generateRandomTextBlocks(),
-      'interaction with guests': generateRandomTextBlocks(),
-      'other things': generateRandomTextBlocks()
+      general: generateRandomTextBlocks(),
+      theSpace: generateRandomTextBlocks(),
+      guestAccess: generateRandomTextBlocks(),
+      interactionWithGuests: generateRandomTextBlocks(),
+      otherThings: generateRandomTextBlocks()
     },
     amenities: {
-      basics: randomize(amenity_selection.basics, true),
-      facilities: randomize(amenity_selection.facilities, true),
-      dining: randomize(amenity_selection.dining, true),
-      safety: randomize(amenity_selection.safety)
+      basics: randomize(amenitySelection.basics, true),
+      facilities: randomize(amenitySelection.facilities, true),
+      dining: randomize(amenitySelection.dining, true),
+      safety: randomize(amenitySelection.safety)
     },
     owner: {
       name: randomize(owners.name),
@@ -141,9 +141,9 @@ const generateHouse = (home_id) => {
   }
 }
 
-const generateHouses = (quantity, start_index) => {
+const generateHouses = (quantity, startIndex) => {
   let houses = [];
-  for (let i = start_index; i < start_index + quantity; i++) {
+  for (let i = startIndex; i < startIndex + quantity; i++) {
     houses.push(generateHouse(i));
   }
   return houses;
