@@ -25,7 +25,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id='homeId'>
         <h1>{this.state.home.homeId}</h1>
       </div>
     )
