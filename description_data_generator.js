@@ -153,7 +153,7 @@ const generateHouses = (quantity, startIndex) => {
 const data = generateHouses(100, 100);
 
 const generateDataFile = () => {
-  fs.writeFile(__dirname + '/seeds/description_data.json', JSON.stringify(data), 'utf8', (err) => {
+  fs.writeFile(__dirname + '/seeds/descriptions.json', JSON.stringify(data), 'utf8', (err) => {
     if (err) { console.log(err); }
     else {
       console.log('Data file created.');
