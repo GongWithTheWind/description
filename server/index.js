@@ -1,14 +1,13 @@
 const express = require('express');
-const app = express();
 const db = require('../database/index.js');
+let app = express();
 
 app.use(express.static(__dirname + './../client/dist/'));
 
-app.get('/descriptions/:homeId', (req, res) => {
-  db.retrieve(req.params.homeId, (err, data) => {
+app.get('/descriptions/:homeId', function (req, res) {
+  db.retrieve(req.params.homeId, function (err, data) {
     if (err) { console.log(err); }
     else {
-      console.log(data);
       res.send(data);
     }
   });

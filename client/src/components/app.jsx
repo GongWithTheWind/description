@@ -6,11 +6,17 @@ class App extends React.Component {
     super(props);
   }
 
-  get() {
-    
+  getHouse() {
+    fetch('/descriptions/101')
+      .then(response => {
+        return response.json();
+      }).then(data => {
+        console.log(data);
+      });
   }
 
   render() {
+    this.getHouse();
     return (
       <div>
         <h1>Hellooooooooo</h1>
