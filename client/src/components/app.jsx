@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'isomorphic-fetch';
 
 class App extends React.Component {
   constructor(props) {
