@@ -34,7 +34,6 @@ From within the root directory:
 
 ```sh
 npm install
-npm install -g webpack
 npm install -g node-mongo-seeds
 
 Generate fake data:
