@@ -9,15 +9,15 @@ const StyledHeader = styled.div`
 
 const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }) => {
   return(
-    <StyledHeader>
-      <h5>Header</h5>
-      <div>{propertyType}</div>
+    <div>
+      <StyledHeader>Header</StyledHeader>
+      <div>{propertyType.toUpperCase()}</div>
       <div>{name}</div>
       <div>{location}</div>
       <img src={owner.image}></img>
       <div>{owner.name}</div>
       <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>
-    </StyledHeader>
+    </div>
   )
 };
 
