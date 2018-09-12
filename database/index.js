@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/description');
+mongoose.connect('mongodb://localhost/description', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -51,8 +51,15 @@ const descriptionSchema = new mongoose.Schema({
 
 const Description = mongoose.model('Description', descriptionSchema);
 
-let retrieve = (homeId) => {
-  Description.find({ homeId: homeId }, callback);
+let retrieve = (homeId, callback) => {
+  let query = { 'homeId': Number(homeId) };
+  Description.find(query)
+    .exec((err, data) => {
+      if (err) { console.log('Error retrieving data'); }
+      else {
+        callback(null, data);
+      }
+    });
 };
 
 module.exports.retrieve = retrieve;

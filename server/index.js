@@ -1,9 +1,16 @@
 const express = require('express');
-const app = express();
 const db = require('../database/index.js');
+let app = express();
 
-app.use(express.static(path.join(__dirname, '../client/dist/index.html')))
+app.use(express.static(__dirname + './../client/dist/'));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/descriptions/:homeId', function (req, res) {
+  db.retrieve(req.params.homeId, function (err, data) {
+    if (err) { console.log(err); }
+    else {
+      res.send(data);
+    }
+  });
+});
 
 app.listen(3002, () => console.log('Listening on port 3002...'));
