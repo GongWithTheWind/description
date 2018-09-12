@@ -11,9 +11,7 @@ import Beds from './Beds.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      home: ''
-    };
+    this.state = { home: '' };
   }
 
   componentDidMount() {

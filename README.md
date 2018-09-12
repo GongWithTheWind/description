@@ -54,5 +54,8 @@ mongo --host 127.0.0.1:27017
 To start server:
 nodemon index.js
 
+To lint:
+./node_modules/.bin/eslint <file-name> --fix
+
 ```
 
