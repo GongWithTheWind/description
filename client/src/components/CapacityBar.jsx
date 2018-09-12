@@ -2,7 +2,7 @@ import React from 'react';
 
 const pluralize = (category, quantity) => {
   return quantity > 1 ? quantity.toString().concat(' ', category, 's') : quantity.toString().concat(' ', category); 
-}
+};
 
 const CapacityBar = ({ guests, beds, bathrooms }) => {
   return(
