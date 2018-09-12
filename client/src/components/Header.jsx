@@ -8,8 +8,8 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
       <div>{propertyType}</div>
       <div>{name}</div>
       <div>{location}</div>
-      <img src={owner ? owner.image : ''}></img>
-      <div>{owner ? owner.name : ''}</div>
+      <img src={owner.image}></img>
+      <div>{owner.name}</div>
       <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>
     </div>
   )

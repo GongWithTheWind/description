@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      home: {}
+      home: ''
     };
   }
 
@@ -25,30 +25,25 @@ class App extends React.Component {
       .then(response => {
         return response.json();
       }).then(data => {
-        console.log(data[0]);
         this.setState({ home: data[0] });
       });
   }
 
   render() {
-    return (
-      <div id='homeId'>
-        <h1>{this.state.home.homeId}</h1>
-        <Header 
-          propertyType={this.state.home.propertyType} 
-          name={this.state.home.name} 
-          location={this.state.home.location} 
-          owner={this.state.home.owner} 
-          guests={this.state.home.guests} 
-          beds={this.state.home.beds} 
-          bathrooms={this.state.home.bathrooms}/>
-        <PromoBar />
-        <Description />
-        <Contact />
-        <Amenities />
-        <Beds />
-      </div>
-    )
+    if (this.state.home === '') { return <div></div> }
+    else {
+      return (
+        <div id='homeId'>
+          <h1>{this.state.home.homeId}</h1>
+          <Header {...this.state.home}/>
+          <PromoBar />
+          <Description />
+          <Contact />
+          <Amenities />
+          <Beds />
+        </div>
+      )
+    }
   }
 }
 

@@ -1,14 +1,17 @@
 import React from 'react';
 
+const pluralize = (category, quantity) => {
+  return quantity > 1 ? quantity.toString().concat(' ', category, 's') : quantity.toString().concat(' ', category); 
+}
+
 const CapacityBar = ({ guests, beds, bathrooms }) => {
   return(
     <div>
-      <span> {guests} guests</span>
-      <span> bedrooms</span>
-      <span> beds</span>
-      <span> {bathrooms} baths</span>
+      <span> {pluralize('guest', guests)}</span>
+      <span> {pluralize('bedroom', beds.bedrooms.length)}</span>
+      <span> {pluralize('bed', beds.bedrooms.reduce((accum, current) => { return accum + current.length; }, 0))}</span>
+      <span> {pluralize('bathroom', bathrooms)}</span>
     </div>
-    // add conditions for plural
   )
 };
 
