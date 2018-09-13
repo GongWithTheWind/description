@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CapacityBar /> should render correctly with props 1`] = `
+<div>
+  <span>
+     
+    9 guests
+  </span>
+  <span>
+     
+    2 bedrooms
+  </span>
+  <span>
+     
+    9 beds
+  </span>
+  <span>
+     
+    15 bathrooms
+  </span>
+</div>
+`;

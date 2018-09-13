@@ -6,14 +6,13 @@ import PromoBar from './PromoBar.jsx';
 import Description from './Description.jsx';
 import Contact from './Contact.jsx';
 import Amenities from './Amenities.jsx';
-import Beds from './Beds.jsx';
+import SleepArrangements from './SleepArrangements.jsx';
+import data from './../../../seeds/descriptions.json';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      home: ''
-    };
+    this.state = { home: data[0] };
   }
 
   componentDidMount() {
@@ -21,29 +20,27 @@ class App extends React.Component {
   }
 
   getHome(homeId) {
-    fetch(`/descriptions/${homeId}`)
+    fetch(`http://localhost:3002/descriptions/${homeId}`)
       .then(response => {
         return response.json();
-      }).then(data => {
+      })
+      .then(data => {
         this.setState({ home: data[0] });
       });
   }
 
   render() {
-    if (this.state.home === '') { return <div></div> }
-    else {
-      return (
-        <div id='homeId'>
-          <h1>{this.state.home.homeId}</h1>
-          <Header {...this.state.home}/>
-          <PromoBar />
-          <Description />
-          <Contact />
-          <Amenities />
-          <Beds />
-        </div>
-      )
-    }
+    return (
+      <div id="home">
+        <h1>{this.state.home.homeId}</h1>
+        <Header {...this.state.home}/>
+        <PromoBar />
+        <Description />
+        <Contact />
+        <Amenities />
+        <SleepArrangements />
+      </div>
+    )
   }
 }
 

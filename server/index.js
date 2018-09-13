@@ -1,16 +1,19 @@
-const express = require('express');
-const db = require('../database/index.js');
-let app = express();
+const express = require("express");
+const path = require("path");
+const db = require("../database/index.js");
 
-app.use(express.static(__dirname + './../client/dist/'));
+const app = express();
 
-app.get('/descriptions/:homeId', function (req, res) {
-  db.retrieve(req.params.homeId, function (err, data) {
-    if (err) { console.log(err); }
-    else {
+app.use(express.static(path.join(__dirname, "./../client/dist/")));
+
+app.get("/descriptions/:homeId", (req, res) => {
+  db.retrieve(req.params.homeId, (err, data) => {
+    if (err) {
+      res.send(err);
+    } else {
       res.send(data);
     }
   });
 });
 
-app.listen(3002, () => console.log('Listening on port 3002...'));
+app.listen(3002, () => console.log("Listening on port 3002..."));

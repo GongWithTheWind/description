@@ -1,11 +1,17 @@
 import React from 'react';
 import CapacityBar from './CapacityBar.jsx';
+import styled from 'styled-components';
+
+const StyledHeader = styled.div`
+  background: blue,
+  color: red
+`
 
 const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }) => {
   return(
     <div>
-      <h5>Header</h5>
-      <div>{propertyType}</div>
+      <StyledHeader>Header</StyledHeader>
+      <div>{propertyType.toUpperCase()}</div>
       <div>{name}</div>
       <div>{location}</div>
       <img src={owner.image}></img>

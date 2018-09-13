@@ -1,10 +1,11 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/description', { useNewUrlParser: true });
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost/description", { useNewUrlParser: true });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('Connected to DB!');
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+  console.log("Connected to DB!");
 });
 
 const descriptionSchema = new mongoose.Schema({
@@ -15,48 +16,47 @@ const descriptionSchema = new mongoose.Schema({
   guests: Number,
   beds: {
     bedrooms: Array,
-    commonSpace: Array
+    commonSpace: Array,
   },
   bathrooms: Number,
   mini_ad: {
     title: String,
-    description: String
+    description: String,
   },
   highlights: {
     title: String,
     description: String,
     helpful: Number,
-    notHelpful: Number
+    notHelpful: Number,
   },
   description: {
     general: String,
     theSpace: String,
     guestAccess: String,
     interactionWithGuests: String,
-    otherThings: String
+    otherThings: String,
   },
   amenities: {
     basics: Array,
     facilities: Array,
     dining: Array,
-    safety: Array
+    safety: Array,
   },
   owner: {
     name: String,
     image: String,
     contact: String,
-    badge: Boolean
-  }
+    badge: Boolean,
+  },
 });
 
-const Description = mongoose.model('Description', descriptionSchema);
+const Description = mongoose.model("Description", descriptionSchema);
 
-let retrieve = (homeId, callback) => {
-  let query = { 'homeId': Number(homeId) };
+const retrieve = (homeId, callback) => {
+  const query = { homeId: Number(homeId) };
   Description.find(query)
     .exec((err, data) => {
-      if (err) { console.log('Error retrieving data'); }
-      else {
+      if (err) { callback(err); } else {
         callback(null, data);
       }
     });
