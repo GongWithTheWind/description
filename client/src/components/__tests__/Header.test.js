@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import Header from './Header.jsx';
-import CapacityBar from './CapacityBar.jsx';
+import { shallow } from 'enzyme';
+import Header from '../Header.jsx';
+import CapacityBar from '../CapacityBar.jsx';
 
 describe('<Header />', () => {
   let wrapper;

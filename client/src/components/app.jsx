@@ -6,7 +6,7 @@ import PromoBar from './PromoBar.jsx';
 import Description from './Description.jsx';
 import Contact from './Contact.jsx';
 import Amenities from './Amenities.jsx';
-import Beds from './Beds.jsx';
+import SleepArrangements from './SleepArrangements.jsx';
 import data from './../../../seeds/descriptions.json';
 
 class App extends React.Component {
@@ -33,12 +33,12 @@ class App extends React.Component {
     return (
       <div id="home">
         <h1>{this.state.home.homeId}</h1>
-        <Header id="header" {...this.state.home}/>
+        <Header {...this.state.home}/>
         <PromoBar />
         <Description />
         <Contact />
         <Amenities />
-        <Beds />
+        <SleepArrangements />
       </div>
     )
   }

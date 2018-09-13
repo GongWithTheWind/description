@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App.jsx';
-import Header from './Header.jsx';
-import PromoBar from './PromoBar.jsx';
-import Description from './Description.jsx';
-import Contact from './Contact.jsx';
-import Amenities from './Amenities.jsx';
-import Beds from './Beds.jsx';
+import App from '../App.jsx';
+import Header from '../Header.jsx';
+import PromoBar from '../PromoBar.jsx';
+import Description from '../Description.jsx';
+import Contact from '../Contact.jsx';
+import Amenities from '../Amenities.jsx';
+import SleepArrangements from '../SleepArrangements';
 
 describe('<App />', () => {
 
@@ -35,7 +35,7 @@ describe('<App />', () => {
   });
 
   it('should have subcomponent called Beds', () => {
-    expect(shallow(<App />).find(Beds).length).toEqual(1);
+    expect(shallow(<App />).find(SleepArrangements).length).toEqual(1);
   });
 
 });

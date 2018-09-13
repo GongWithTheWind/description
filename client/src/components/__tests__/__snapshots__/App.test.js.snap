@@ -101,7 +101,6 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
       ]
     }
     homeId={100}
-    id="header"
     location="Mandalay, Myanmar"
     miniAd={
       Object {
@@ -124,6 +123,6 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
   <Description />
   <Contact />
   <Amenities />
-  <Beds />
+  <SleepArrangements />
 </div>
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import CapacityBar from './CapacityBar.jsx';
+import { shallow } from 'enzyme';
+import CapacityBar from '../CapacityBar.jsx';
 
 describe('<CapacityBar />', () => {
   let wrapper;
