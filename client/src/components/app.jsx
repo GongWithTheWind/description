@@ -32,13 +32,12 @@ class App extends React.Component {
   render() {
     return (
       <div id="home">
-        <h1>{this.state.home.homeId}</h1>
         <Header {...this.state.home}/>
-        <PromoBar />
-        <Description />
-        <Contact />
-        <Amenities />
-        <SleepArrangements />
+        <PromoBar {...this.state.home}/>
+        <Description {...this.state.home}/>
+        <Contact {...this.state.home}/>
+        <Amenities {...this.state.home}/>
+        <SleepArrangements {...this.state.home}/>
       </div>
     )
   }
