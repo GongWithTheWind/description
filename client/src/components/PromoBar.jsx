@@ -88,7 +88,7 @@ class PromoBar extends React.Component {
           <div style={highlightTitle}>HOME HIGHLIGHTS</div>
           {this.props.highlights.map((highlight, index) => {
             return (
-              <div>
+              <div key={index}>
                 <div><span style={title}>{highlight.title} &#183; </span>{highlight.description}</div>
                 <RatingsLine>
                   <StyledLink href='#'>Helpful<StyledThumb src='https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png'></StyledThumb></StyledLink>

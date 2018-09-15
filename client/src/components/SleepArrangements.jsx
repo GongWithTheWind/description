@@ -1,119 +1,101 @@
 import React from 'react';
 import styled from 'styled-components';
+import Bedroom from './Bedroom.jsx';
 
 // Additional features to implement:
-// Show type of bed for each bedroom
+// List out type of bed for each bedroom ()
 
 const StyledSleepArrangements = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #484848;
-  margin: 20px 20px 10px 10px;
+  margin: 20px 10px 10px 10px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.5px;
-  display: flex;
 `;
-  
-const CarouselContainer = styled.div`
+
+const Container = styled.div`
+  position: relative;
+  flex-basis: 700px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 210px;
+  flex-direction: row;
 `;
 
 const Carousel = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 `;
 
-const StyledUl = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-`;
-
-const BedroomContainer = styled.div`
+// box-shadow: 0 0 2px #00abb2;
+const ArrowButton = styled.button`
   box-shadow: 0 0 2px #e6e6e6;
-  box-sizing: content-box;
-  margin: 20px 5px 5px 5px;
-  padding: 15px 20px 15px 20px;
-  font-size: 13px;
-  font-weight: 320;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
+  color: #484848;
+  border-radius: 50%;
+  outline: none;
+  height: 32px;
+  width: 32px;
+  font-size: 24px;
+  font-weight: 150;
+  margin: auto;
 `;
 
-const StyledBed = styled.img`
-  height: 24px;
-  width: 24px;
-  margin: 0px 0px 20px 0px;
+const RightArrow = styled.i`
+  border: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 6px;
+  margin: 0 0 6px -6px;
+  vertical-align: middle;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  flex-grow: 0;
 `;
 
-const title = {
-  fontWeight: '420',
-  marginBottom: '5px'
-};
+const LeftArrow = styled.i`
+  border: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 6px;
+  margin: 0 0 6px 4px;
+  vertical-align: middle;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  flex-grow: 0;
+`;
 
-const imageUrls = {
-  doubleBed: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/bedDouble.png',
-  singleBed: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/bedSingle.png',
-  sofaBed: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/bedSofa.png'
-};
+class SleepArrangements extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.prevSlide = this.prevSlide.bind(this);
+  }
 
-const pluralize = (category, quantity) => {
-  return quantity > 1 ? quantity.toString().concat(' ', category, 's') : quantity.toString().concat(' ', category); 
-};
+  prevSlide() {
 
-const countBeds = (beds) => {
-  let arrangments = [];
-  let doubles = ['king', 'queen', 'double'];
-  let singles = ['twin', 'floor mattress', 'futon', 'couch'];
-  beds.bedrooms.forEach((bedroom, index) => {
-    let doublesCount = 0;
-    let singlesCount = 0;
-    if (Array.isArray(bedroom)) {
-      bedroom.forEach(bed => {
-        if (doubles.includes(bed)) {
-          doublesCount++;
-        } else if (singles.includes(bed)) {
-          singlesCount++;
-        }
-      });
-    } else if (doubles.includes(bedroom)) {
-      doublesCount++;
-    } else if (singles.includes(bedroom)) {
-      singlesCount++;
-    }
-    arrangments.push([`Bedroom ${index + 1}`, doublesCount, singlesCount]);
-  });
-  return arrangments;
-}
+  }
 
-const SleepArrangements = ({ beds }) => {
-  let arrangements = countBeds(beds);
+  nextSlide() {
 
-  return(
-    <StyledSleepArrangements>
-      <Carousel>
-        <div>Sleeping arrangements</div>
-        {arrangements.map((bedroom) => {
-          return (
-            <BedroomContainer>
-              {Array(bedroom[1]).fill(imageUrls.doubleBed).map(image => {
-                return (<StyledBed src={image}></StyledBed>)
-              })}
-              {Array(bedroom[2]).fill(imageUrls.singleBed).map(image => {
-                return (<StyledBed src={image}></StyledBed>)
-              })}
-              <div style={title}>{bedroom[0]}</div>
-              {(bedroom[1] > 0) ? <div>{pluralize('double bed', bedroom[1])}</div> : <div></div>}
-              {(bedroom[2] > 0) ? <div>{pluralize('single bed', bedroom[2])}</div> : <div></div>}
-            </BedroomContainer>
-          )
-        })}
-      </Carousel>
-    </StyledSleepArrangements>
-  )
+  }
+
+  render() {
+    return(
+      <StyledSleepArrangements>
+          <div>Sleeping arrangements</div>
+        <Container>
+          <ArrowButton onClick={() => this.prevSlide()}><LeftArrow /></ArrowButton>
+          <Carousel>
+            {this.props.beds.bedrooms.map((bedroom, index) => {
+              return <Bedroom bedroom={bedroom} key={index} index={index} />
+            })}
+          </Carousel>
+          <ArrowButton onClick={() => this.nextSlide()}><RightArrow /></ArrowButton>
+        </Container>
+      </StyledSleepArrangements>
+    )
+  }
 }
 
 export default SleepArrangements;

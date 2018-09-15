@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const DescriptionBox = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #484848;
-  margin: 20px 20px 10px 10px;
+  margin: 20px 20px 30px 10px;
   font-size: 15px;
   font-weight: 320;
   line-height: 1.4;
@@ -19,6 +19,8 @@ const title = {
 
 const link = {
   fontSize: '16px',
+  border: 'none',
+  outline: 'none',
   fontWeight: '500',
   color: '#00abb2',
   letterSpacing: '0.5px'
@@ -67,14 +69,14 @@ class Description extends React.Component {
               )
             })
           }
-          <a style={link} onClick={() => this.toggleShowText()}>Hide &#9650;</a>
+          <button style={link} onClick={() => this.toggleShowText()}>Hide &#9650;</button>
         </DescriptionBox>
       )
     } else {
       return(
         <DescriptionBox>
           <p>{this.props.description.general}</p>
-          <a style={link} onClick={() => this.toggleShowText()}>Read more about the space &#9660;</a>
+          <button style={link} onClick={() => this.toggleShowText()}>Read more about the space &#9660;</button>
         </DescriptionBox>
       )
     }

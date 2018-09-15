@@ -10,10 +10,12 @@ const StyledHeader = styled.div`
 `;
 
 const TextContainer = styled.div`
+  margin-left: 0;
   flex-basis: 550px;
 `;
 
 const ImageContainer = styled.div`
+  margin-right: 0;
   flex-basis: 150px;
 `;
 
@@ -50,7 +52,7 @@ const StyledOwnerName = styled.div`
 
 const StyledImage = styled.img`
   display: block;
-  margin: 25px auto 8px auto;
+  margin: 20px auto 8px auto;
   height: 48px;
   width: 48px;
   overflow: hidden;

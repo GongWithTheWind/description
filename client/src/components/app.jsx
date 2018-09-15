@@ -32,7 +32,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getHome(107);
+    this.getHome(150);
   }
 
   getHome(homeId) {
