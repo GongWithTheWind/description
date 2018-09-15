@@ -8,6 +8,22 @@ import Contact from './Contact.jsx';
 import Amenities from './Amenities.jsx';
 import SleepArrangements from './SleepArrangements.jsx';
 import data from './../../../seeds/descriptions.json';
+import styled from 'styled-components';
+
+const ModuleContainer = styled.div`
+  display: flex;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+`;
+
+const SectionBreakLine = styled.hr`
+  margin: 20px 20px 10px 10px;
+  border: 0;
+  height: 1px;
+  background-color: #e6e6e6;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +32,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getHome(160);
+    this.getHome(107);
   }
 
   getHome(homeId) {
@@ -31,14 +47,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="home">
-        <Header {...this.state.home}/>
-        <PromoBar {...this.state.home}/>
-        <Description {...this.state.home}/>
-        <Contact {...this.state.home}/>
-        <Amenities {...this.state.home}/>
-        <SleepArrangements {...this.state.home}/>
-      </div>
+      <ModuleContainer>
+        <div id="home">
+          <Header {...this.state.home}/>
+          <PromoBar {...this.state.home}/>
+          <Description {...this.state.home}/>
+          <Contact {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+          <Amenities {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+          <SleepArrangements {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+        </div>
+      </ModuleContainer>
     )
   }
 }

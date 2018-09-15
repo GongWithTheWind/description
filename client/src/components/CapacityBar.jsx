@@ -14,6 +14,17 @@ const StyledIcon = styled.img`
   margin: 0px 8px -4px 8px;
 `;
 
+const FirstIcon = styled.img`
+  height: 18px;
+  width: 18px;
+  margin: 0px 4px -2px 0px;
+`;
+
+const ImageBlock = styled.div`
+  display: block;
+  float: left;
+`;
+
 const imageUrls = {
   guest: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/guests.png',
   bed: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/beds.png',
@@ -28,10 +39,14 @@ const pluralize = (category, quantity) => {
 const CapacityBar = ({ guests, beds, bathrooms }) => {
   return(
     <StyledCapacityBar>
-      <span> <StyledIcon src={imageUrls.guest}></StyledIcon>{pluralize('guest', guests)}</span>
-      <span> <StyledIcon src={imageUrls.bedroom}></StyledIcon>{pluralize('bedroom', beds.bedrooms.length)}</span>
-      <span> <StyledIcon src={imageUrls.bed}></StyledIcon>{pluralize('bed', beds.bedrooms.reduce((accum, current) => { return accum + current.length; }, 0))}</span>
-      <span> <StyledIcon src={imageUrls.bath}></StyledIcon>{pluralize('bath', bathrooms)}</span>
+      <ImageBlock>
+        <FirstIcon src={imageUrls.guest}></FirstIcon>{pluralize('guest', guests)} 
+        <StyledIcon src={imageUrls.bedroom}></StyledIcon>{pluralize('bedroom', beds.bedrooms.length)} 
+      </ImageBlock>
+      <ImageBlock>
+        <StyledIcon src={imageUrls.bed}></StyledIcon>{pluralize('bed', beds.bedrooms.reduce((accum, current) => { return accum + current.length; }, 0))}
+        <StyledIcon src={imageUrls.bath}></StyledIcon>{pluralize('bath', bathrooms)}
+      </ImageBlock> 
     </StyledCapacityBar>
   )
 };

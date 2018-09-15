@@ -1,8 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Contact = () => {
+const StyledContact = styled.div`
+  font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #00abb2;
+  margin: 20px 20px 10px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+`;
+
+const Contact = ({ owner }) => {
   return(
-    <h5>Contact</h5>
+    <StyledContact link={owner.contact}>Contact host</StyledContact>
   )
 }
 

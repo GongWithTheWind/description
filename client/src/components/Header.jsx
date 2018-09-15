@@ -5,14 +5,23 @@ import styled from 'styled-components';
 const StyledHeader = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #484848;
+  display: flex;
+  flex-direction: row;
+`;
+
+const TextContainer = styled.div`
+  flex-basis: 550px;
+`;
+
+const ImageContainer = styled.div`
+  flex-basis: 150px;
 `;
 
 const StyledPropertyType = styled.div`
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 0.8;
+  font-size: 11px;
   font-weight: 800;
-  display: inline-block;
+  margin: 10px 3px 3px 2px;
 `;
 
 const StyledName = styled.div`
@@ -20,61 +29,51 @@ const StyledName = styled.div`
   font-size: 32px;
   word-wrap: break-word;
   line-height: 32px;
-  padding-top: 0px;
-  padding-bottom: 6px;
 `;
 
 const StyledLocation = styled.div`
-  font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 24px;
+  font-weight: 250;
+  font-size: 14px;
+  margin: 3px 3px 12px 2px;
   padding-top: 6px;
   padding-bottom: 6px;
-`;
-
-const StyledOwner = styled.div`
-  display: table-cell;
-  vertical-align: middle;
-  box-sizing: border-box;
-  display: inline-block;
-  float: right; 
-  margin: 0px 0px 0px 0px;
+  letter-spacing: 0.5px;
 `;
 
 const StyledOwnerName = styled.div`
-  vertical-align: middle;
+  text-align: center;
   font-size: 12px;
   font-weight: 250;
   line-height: 12px;
-`;
-
-const StyledContainer = styled.span`
-  height: 48px;
-  width: 48px;
-  overflow: hidden;
+  letter-spacing: 1.0px;
 `;
 
 const StyledImage = styled.img`
-  vertical-align: middle;
-  height: auto;
+  display: block;
+  margin: 25px auto 8px auto;
+  height: 48px;
   width: 48px;
+  overflow: hidden;
+  border-radius: 50%;
 `;
 
 const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }) => {
   
   return(
     <StyledHeader>
-      <StyledPropertyType>{propertyType}</StyledPropertyType>
-      <StyledName>{name}
-        <StyledOwner>
-          <StyledContainer>
-            <StyledImage src={owner.image}></StyledImage>
-            <StyledOwnerName>{owner.name}</StyledOwnerName>
-          </StyledContainer>
-        </StyledOwner>
-      </StyledName>
-      <StyledLocation>{location}</StyledLocation>
-      <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>
+
+      <TextContainer>
+        <StyledPropertyType>{propertyType}</StyledPropertyType>
+        <StyledName>{name}</StyledName>
+        <StyledLocation>{location}</StyledLocation>
+        <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>
+      </TextContainer>
+
+      <ImageContainer>
+        <StyledImage src={owner.image}></StyledImage>
+        <StyledOwnerName>{owner.name}</StyledOwnerName>
+      </ImageContainer>
+
     </StyledHeader>
   )
 };
