@@ -43,6 +43,7 @@ Seed data:
 seed
 
 Test:
+./node_modules/.bin/eslint <file-name> --fix
 npm run test
 
 For Developement:
@@ -52,10 +53,10 @@ mongod
 mongo --host 127.0.0.1:27017
 
 To start server:
-nodemon index.js
+nodemon ./server/index.js
 
-To lint:
-./node_modules/.bin/eslint <file-name> --fix
+To transpile client files:
+npm run react-dev
 
 ```
 

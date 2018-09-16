@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'isomorphic-fetch';
 import Header from './Header.jsx';
 import PromoBar from './PromoBar.jsx';
@@ -12,7 +11,7 @@ import styled from 'styled-components';
 
 const ModuleContainer = styled.div`
   display: flex;
-  margin-top: 18px;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   max-width: 700px;
@@ -28,13 +27,11 @@ const SectionBreakLine = styled.hr`
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      home: data[0]
-    };
+    this.state = { home: data[0] };
   }
 
   componentDidMount() {
-    this.getHome(101);
+    this.getHome(100);
   }
 
   getHome(homeId) {
@@ -49,8 +46,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <ModuleContainer>
-        <div id="home">
+      <ModuleContainer id="home">
           <Header {...this.state.home}/>
           <PromoBar {...this.state.home}/>
           <Description {...this.state.home}/>
@@ -60,7 +56,6 @@ class App extends React.Component {
           <SectionBreakLine></SectionBreakLine>
           <SleepArrangements {...this.state.home}/>
           <SectionBreakLine></SectionBreakLine>
-        </div>
       </ModuleContainer>
     )
   }

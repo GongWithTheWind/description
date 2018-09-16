@@ -7,11 +7,11 @@ const Backdrop = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: scroll;
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
 `;
 
@@ -43,19 +43,14 @@ const SectionBreakLine = styled.hr`
   background-color: #e6e6e6;
 `;
 
-const mainTitle = {
-  fontSize: '24px',
-  fontWeight: '500'
-};
-
-const title = {
-  fontSize: '16px',
-  fontWeight: '500',
-};
+const Title = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+`;
 
 const listAmenities = (list) => {
-  return list.map(amenity => {
-    return <div>{amenity}<SectionBreakLine /></div>
+  return list.map((amenity, index) => {
+    return <div key={index}>{amenity}<SectionBreakLine /></div>
   })
 }
 
@@ -65,18 +60,16 @@ class AmenityModal extends React.Component {
     return (
       <Backdrop>
         <AmenityList>
-        <div>
           <CloseButton type='image' src='https://s3-us-west-1.amazonaws.com/betterbnb-description/closeButton.png' onClick={this.props.onClose}></CloseButton>
-          <div style={mainTitle}>Amenities</div>
-          <div style={title}>Basics</div>
+          <Title style={{'fontSize': '24px'}}>Amenities</Title>
+          <Title>Basics</Title>
           <div>{listAmenities(this.props.amenities.basics)}</div>
-          <div style={title}>Facilities</div>
+          <Title>Facilities</Title>
           <div>{listAmenities(this.props.amenities.facilities)}</div>
-          <div style={title}>Dining</div>
+          <Title>Dining</Title>
           <div>{listAmenities(this.props.amenities.dining)}</div>
-          <div style={title}>Safety</div>
+          <Title>Safety</Title>
           <div>{listAmenities(this.props.amenities.safety)}</div>
-        </div>
         </AmenityList>
       </Backdrop>
     );

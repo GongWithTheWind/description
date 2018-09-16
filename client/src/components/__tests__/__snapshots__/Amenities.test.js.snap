@@ -1,7 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Amenities /> should render correctly with props 1`] = `
-<h5>
-  Amenities
-</h5>
+<ForwardRef>
+  <div
+    style={
+      Object {
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    Amenities
+  </div>
+  <ForwardRef>
+    <ForwardRef
+      key="0"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png"
+      />
+      <span>
+        Wifi
+      </span>
+    </ForwardRef>
+    <ForwardRef
+      key="1"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/fireplace.png"
+      />
+      <span>
+        Fireplace
+      </span>
+    </ForwardRef>
+    <ForwardRef
+      key="2"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/TV.png"
+      />
+      <span>
+        TV
+      </span>
+    </ForwardRef>
+    <ForwardRef
+      key="3"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png"
+      />
+      <span>
+        Essentials (towels, bedsheets, soap, toilet paper, pillows)
+      </span>
+    </ForwardRef>
+    <ForwardRef
+      key="4"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png"
+      />
+      <span>
+        Shampoo
+      </span>
+    </ForwardRef>
+    <ForwardRef
+      key="5"
+    >
+      <ForwardRef
+        src="https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png"
+      />
+      <span>
+        Parking
+      </span>
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    onClick={[Function]}
+  >
+    Show all 
+    20
+     amenities
+  </ForwardRef>
+  <AmenityModal
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    onClose={[Function]}
+    show={false}
+  />
+</ForwardRef>
 `;

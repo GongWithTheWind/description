@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contact /> should render correctly with props 1`] = `
-<h5>
-  Contact
-</h5>
+<ForwardRef
+  link="jpjohnson@gmail.com"
+  onClick={[Function]}
+>
+  Contact host
+</ForwardRef>
 `;

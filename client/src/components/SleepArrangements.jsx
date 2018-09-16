@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Bedroom from './Bedroom.jsx';
 
 // Additional features to implement:
-// List out type of bed for each bedroom ()
+// List out type of bed for each bedroom
+// Complete sleep arrangement carousel (update data to include >2 bedrooms max)
 
 const StyledSleepArrangements = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -27,7 +28,6 @@ const Carousel = styled.div`
   flex-grow: 1;
 `;
 
-// box-shadow: 0 0 2px #00abb2;
 const ArrowButton = styled.button`
   box-shadow: 0 0 2px #e6e6e6;
   color: #484848;
@@ -80,7 +80,7 @@ class SleepArrangements extends React.Component {
   render() {
     return(
       <StyledSleepArrangements>
-          <div>Sleeping arrangements</div>
+        <div>Sleeping arrangements</div>
         <Container>
           <ArrowButton onClick={() => this.prevSlide()}><LeftArrow /></ArrowButton>
           <Carousel>

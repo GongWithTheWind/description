@@ -7,11 +7,13 @@ const StyledHeader = styled.div`
   color: #484848;
   display: flex;
   flex-direction: row;
+  margin-top: 18px;
 `;
 
 const TextContainer = styled.div`
   margin-left: 0;
   flex-basis: 550px;
+  padding-left: 10px;
 `;
 
 const ImageContainer = styled.div`
@@ -60,7 +62,6 @@ const StyledImage = styled.img`
 `;
 
 const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }) => {
-  
   return(
     <StyledHeader>
 
@@ -72,7 +73,7 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
       </TextContainer>
 
       <ImageContainer>
-        <StyledImage src={owner.image}></StyledImage>
+        <StyledImage src={owner.image} id='ownerPic'></StyledImage>
         <StyledOwnerName>{owner.name}</StyledOwnerName>
       </ImageContainer>
 

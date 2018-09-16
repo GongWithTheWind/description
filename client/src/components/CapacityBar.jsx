@@ -7,23 +7,24 @@ const StyledCapacityBar = styled.div`
   font-weight: 300;
   font-size: 15px;
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const PairContainer = styled.div`
+  display: flex;
+  margin-right: 15px;
+`;
+
+const SingleContainer = styled.div`
+  flex-grow: 1;
+  min-width: 100px;
 `;
 
 const StyledIcon = styled.img`
   height: 20px;
   width: 20px;
-  margin: 0px 8px -4px 8px;
-`;
-
-const FirstIcon = styled.img`
-  height: 18px;
-  width: 18px;
-  margin: 0px 4px -2px 0px;
-`;
-
-const ImageBlock = styled.div`
-  display: block;
-  float: left;
+  margin: 0px 8px -4px 0px;
 `;
 
 const imageUrls = {
@@ -40,14 +41,22 @@ const pluralize = (category, quantity) => {
 const CapacityBar = ({ guests, beds, bathrooms }) => {
   return(
     <StyledCapacityBar>
-      <ImageBlock>
-        <FirstIcon src={imageUrls.guest}></FirstIcon>{pluralize('guest', guests)} 
-        <StyledIcon src={imageUrls.bedroom}></StyledIcon>{pluralize('bedroom', beds.bedrooms.length)} 
-      </ImageBlock>
-      <ImageBlock>
-        <StyledIcon src={imageUrls.bed}></StyledIcon>{pluralize('bed', beds.bedrooms.reduce((accum, current) => { return accum + current.length; }, 0))}
-        <StyledIcon src={imageUrls.bath}></StyledIcon>{pluralize('bath', bathrooms)}
-      </ImageBlock> 
+      <PairContainer>
+        <SingleContainer>
+          <StyledIcon src={imageUrls.guest}></StyledIcon>{pluralize('guest', guests)}
+        </SingleContainer>
+        <SingleContainer>
+          <StyledIcon src={imageUrls.bedroom}></StyledIcon>{pluralize('bedroom', beds.bedrooms.length)}
+        </SingleContainer>
+      </PairContainer>
+      <PairContainer>
+        <SingleContainer>
+          <StyledIcon src={imageUrls.bed}></StyledIcon>{pluralize('bed', beds.bedrooms.reduce((accum, current) => { return accum + current.length; }, 0))}
+        </SingleContainer>
+        <SingleContainer>
+          <StyledIcon src={imageUrls.bath}></StyledIcon>{pluralize('bath', bathrooms)}
+        </SingleContainer>
+      </PairContainer> 
     </StyledCapacityBar>
   )
 };

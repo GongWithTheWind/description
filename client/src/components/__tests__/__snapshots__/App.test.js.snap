@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> should render correctly with no props 1`] = `
-<div
+<ForwardRef
   id="home"
 >
-  <h1>
-    100
-  </h1>
   <Header
     amenities={
       Object {
@@ -119,10 +116,568 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
     }
     propertyType="earth house"
   />
-  <PromoBar />
-  <Description />
-  <Contact />
-  <Amenities />
-  <SleepArrangements />
-</div>
+  <PromoBar
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    bathrooms={15}
+    beds={
+      Object {
+        "bedrooms": Array [
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ],
+          "queen",
+        ],
+        "commonSpace": Array [
+          "king",
+          "couch",
+          "queen",
+          "floor mattress",
+        ],
+      }
+    }
+    description={
+      Object {
+        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
+        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+
+Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+
+Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
+        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+
+Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+
+Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
+        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+
+Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+
+Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
+        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+
+Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+
+Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+      }
+    }
+    guests={9}
+    highlights={
+      Array [
+        Object {
+          "description": "This is one of few homes in this area that has this feature.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Hot tub",
+        },
+        Object {
+          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Great value",
+        },
+      ]
+    }
+    homeId={100}
+    location="Mandalay, Myanmar"
+    miniAd={
+      Object {
+        "description": "It’s been viewed 500+ times in the past week.",
+        "title": "This home is on people’s minds.",
+      }
+    }
+    name="Romantic Cabana"
+    owner={
+      Object {
+        "badge": true,
+        "contact": "jpjohnson@gmail.com",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
+        "name": "Michaelangelo",
+      }
+    }
+    propertyType="earth house"
+  />
+  <Description
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    bathrooms={15}
+    beds={
+      Object {
+        "bedrooms": Array [
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ],
+          "queen",
+        ],
+        "commonSpace": Array [
+          "king",
+          "couch",
+          "queen",
+          "floor mattress",
+        ],
+      }
+    }
+    description={
+      Object {
+        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
+        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+
+Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+
+Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
+        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+
+Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+
+Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
+        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+
+Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+
+Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
+        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+
+Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+
+Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+      }
+    }
+    guests={9}
+    highlights={
+      Array [
+        Object {
+          "description": "This is one of few homes in this area that has this feature.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Hot tub",
+        },
+        Object {
+          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Great value",
+        },
+      ]
+    }
+    homeId={100}
+    location="Mandalay, Myanmar"
+    miniAd={
+      Object {
+        "description": "It’s been viewed 500+ times in the past week.",
+        "title": "This home is on people’s minds.",
+      }
+    }
+    name="Romantic Cabana"
+    owner={
+      Object {
+        "badge": true,
+        "contact": "jpjohnson@gmail.com",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
+        "name": "Michaelangelo",
+      }
+    }
+    propertyType="earth house"
+  />
+  <Contact
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    bathrooms={15}
+    beds={
+      Object {
+        "bedrooms": Array [
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ],
+          "queen",
+        ],
+        "commonSpace": Array [
+          "king",
+          "couch",
+          "queen",
+          "floor mattress",
+        ],
+      }
+    }
+    description={
+      Object {
+        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
+        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+
+Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+
+Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
+        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+
+Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+
+Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
+        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+
+Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+
+Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
+        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+
+Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+
+Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+      }
+    }
+    guests={9}
+    highlights={
+      Array [
+        Object {
+          "description": "This is one of few homes in this area that has this feature.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Hot tub",
+        },
+        Object {
+          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Great value",
+        },
+      ]
+    }
+    homeId={100}
+    location="Mandalay, Myanmar"
+    miniAd={
+      Object {
+        "description": "It’s been viewed 500+ times in the past week.",
+        "title": "This home is on people’s minds.",
+      }
+    }
+    name="Romantic Cabana"
+    owner={
+      Object {
+        "badge": true,
+        "contact": "jpjohnson@gmail.com",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
+        "name": "Michaelangelo",
+      }
+    }
+    propertyType="earth house"
+  />
+  <ForwardRef />
+  <Amenities
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    bathrooms={15}
+    beds={
+      Object {
+        "bedrooms": Array [
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ],
+          "queen",
+        ],
+        "commonSpace": Array [
+          "king",
+          "couch",
+          "queen",
+          "floor mattress",
+        ],
+      }
+    }
+    description={
+      Object {
+        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
+        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+
+Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+
+Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
+        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+
+Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+
+Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
+        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+
+Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+
+Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
+        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+
+Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+
+Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+      }
+    }
+    guests={9}
+    highlights={
+      Array [
+        Object {
+          "description": "This is one of few homes in this area that has this feature.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Hot tub",
+        },
+        Object {
+          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Great value",
+        },
+      ]
+    }
+    homeId={100}
+    location="Mandalay, Myanmar"
+    miniAd={
+      Object {
+        "description": "It’s been viewed 500+ times in the past week.",
+        "title": "This home is on people’s minds.",
+      }
+    }
+    name="Romantic Cabana"
+    owner={
+      Object {
+        "badge": true,
+        "contact": "jpjohnson@gmail.com",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
+        "name": "Michaelangelo",
+      }
+    }
+    propertyType="earth house"
+  />
+  <ForwardRef />
+  <SleepArrangements
+    amenities={
+      Object {
+        "basics": Array [
+          "smoking allowed",
+          "wifi",
+          "air conditioning",
+          "fireplace",
+          "TV",
+          "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "shampoo",
+          "parking",
+          "iron",
+          "pets allowed",
+          "heating",
+          "desk/workspace",
+        ],
+        "dining": Array [
+          "grill",
+          "breakfast",
+          "coffee/tea",
+          "pizza oven",
+        ],
+        "facilities": Array [
+          "washer",
+          "pool",
+          "gym",
+        ],
+        "safety": "safety card",
+      }
+    }
+    bathrooms={15}
+    beds={
+      Object {
+        "bedrooms": Array [
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ],
+          "queen",
+        ],
+        "commonSpace": Array [
+          "king",
+          "couch",
+          "queen",
+          "floor mattress",
+        ],
+      }
+    }
+    description={
+      Object {
+        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
+        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+
+Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+
+Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
+        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+
+Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+
+Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
+        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+
+Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+
+Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
+        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+
+Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+
+Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+      }
+    }
+    guests={9}
+    highlights={
+      Array [
+        Object {
+          "description": "This is one of few homes in this area that has this feature.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Hot tub",
+        },
+        Object {
+          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "helpful": 0,
+          "notHelpful": 0,
+          "title": "Great value",
+        },
+      ]
+    }
+    homeId={100}
+    location="Mandalay, Myanmar"
+    miniAd={
+      Object {
+        "description": "It’s been viewed 500+ times in the past week.",
+        "title": "This home is on people’s minds.",
+      }
+    }
+    name="Romantic Cabana"
+    owner={
+      Object {
+        "badge": true,
+        "contact": "jpjohnson@gmail.com",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
+        "name": "Michaelangelo",
+      }
+    }
+    propertyType="earth house"
+  />
+  <ForwardRef />
+</ForwardRef>
 `;

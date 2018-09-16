@@ -1,7 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SleepArrangements /> should render correctly with props 1`] = `
-<h5>
-  SleepArrangements
-</h5>
+<ForwardRef>
+  <div>
+    Sleeping arrangements
+  </div>
+  <ForwardRef>
+    <ForwardRef
+      onClick={[Function]}
+    >
+      <ForwardRef />
+    </ForwardRef>
+    <ForwardRef>
+      <Bedroom
+        bedroom={
+          Array [
+            "floor mattress",
+            "king",
+            "twin",
+            "double",
+          ]
+        }
+        index={0}
+        key="0"
+      />
+      <Bedroom
+        bedroom="queen"
+        index={1}
+        key="1"
+      />
+    </ForwardRef>
+    <ForwardRef
+      onClick={[Function]}
+    >
+      <ForwardRef />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
 `;

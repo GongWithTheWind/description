@@ -28,6 +28,16 @@ const AmenityIcon = styled.img`
   margin: -5px 5px 5px -5px;
 `;
 
+const ExpansionLink = styled.button`
+  font-size: 16px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: #00abb2;
+  padding: 0;
+  margin-top: 10px;
+`;
+
 const imageUrls = {
   'essentials (towels, bedsheets, soap, toilet paper, pillows)': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png',
   'wifi': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png',
@@ -42,16 +52,6 @@ const imageUrls = {
   'hottub': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/hottub.png',
   'washer': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/washer.png',
 };
-
-const ExpansionLink = styled.button`
-  font-size: 16px;
-  border: none;
-  outline: none;
-  font-weight: 500;
-  color: #00abb2;
-  padding: 0;
-  margin-top: 10px;
-`;
 
 const title = {
   fontSize: '16px',

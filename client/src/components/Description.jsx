@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const DescriptionBox = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #484848;
-  margin: 20px 20px 10px 10px;
+  margin: 10px 20px 10px 10px;
   font-size: 15px;
   font-weight: 320;
   line-height: 1.4;
@@ -47,8 +47,6 @@ class Description extends React.Component {
     this.state = { showText: false };
     this.toggleShowText = this.toggleShowText.bind(this);
   }
-
-  componentDidMount() {}
 
   toggleShowText() {
     let newState = this.state.showText ? false : true;
