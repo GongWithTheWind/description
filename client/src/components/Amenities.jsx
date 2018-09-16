@@ -66,7 +66,6 @@ const capitalize = (word) => {
 const assembleIcons = ({ basics, facilities, dining, safety }) => {
   let icons = [];
   let allAmenities = basics.concat(facilities, dining, safety);
-
   for (let i = 0; i < allAmenities.length; i++) {
     if (allAmenities[i] in imageUrls) {
       icons.push([allAmenities[i], imageUrls[allAmenities[i]]]);

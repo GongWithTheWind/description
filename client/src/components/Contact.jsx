@@ -50,12 +50,14 @@ const CloseButton = styled.input`
   vertical-align: middle;
 `;
 
+const imageUrls = {
+  close: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/closeButton.png'
+};
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showModal: false
-    };
+    this.state = { showModal: false };
   }
 
   toggleModal() {
@@ -71,7 +73,7 @@ class Contact extends React.Component {
           <StyledContact link={this.props.owner.contact}>Contact host</StyledContact>
           <Backdrop>
             <EmailContact>
-              <CloseButton type='image' src='https://s3-us-west-1.amazonaws.com/betterbnb-description/closeButton.png' onClick={() => this.toggleModal()}></CloseButton>
+              <CloseButton type='image' src={imageUrls.close} onClick={() => this.toggleModal()}></CloseButton>
               <div style={{'fontWeight': '400'}}>Email host at:</div>
               <div>{this.props.owner.contact}</div>
             </EmailContact>

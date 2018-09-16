@@ -25,8 +25,16 @@ const HighlightBox = styled.div`
   padding: 15px 20px 15px 20px;
   font-size: 14px;
   font-weight: 340;
-  line-height: 1.4;
+  line-height: 1.8;
   letter-spacing: 0.25px;
+`;
+
+const HighlightTitle = styled.div`
+  font-weight: 420;
+  font-size: 12px;
+  color: #898989;
+  margin-top: 8px;
+  margin-bottom: 10px;
 `;
 
 const StyledThumb = styled.img`
@@ -48,68 +56,37 @@ const StyledLink = styled.a`
   line-height: 1.3;
   letter-spacing: 0.5px;
   text-decoration: none;
+  &:hover { color: #00abb2 }
 `;
 
-const RatingsContainer = styled.div`
-  margin: 7px 0px 12px 0px;
-`;
+const imageUrls = {
+  bulb: 'https://a0.muscache.com/airbnb/static/page3/icon-uc-light-bulb-b34f4ddc543809b3144949c9e8cfcc8d.gif',
+  thumb: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png'
+};
 
-const HighlightTitle = styled.div`
-  font-weight: 420;
-  font-size: 12px;
-  color: #898989;
-  margin-top: 8px;
-  margin-bottom: 10px;
-`;
-
-
-class PromoBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hovering: false
-    }; // TODO: implement hover feature for helpful links
-  }
-
-  handleHoverOn() {
-    this.setState({ hovering: true });
-  }
-
-  handleHoverOff() { 
-    this.setState({ hovering: false });
-  }
-
-  render() {
-    const linkColor = {
-      color: this.state.hovering ? '#00abb2' : '#898989'
-    };
-    return(
-      <StyledHighlightBlock>
-        <AdBox>
-          <StyledBulb src='https://a0.muscache.com/airbnb/static/page3/icon-uc-light-bulb-b34f4ddc543809b3144949c9e8cfcc8d.gif'></StyledBulb>
-          <div style={{'fontWeight': '400'}}>{this.props.miniAd.title}</div>
-          <div>{this.props.miniAd.description}</div>
-        </AdBox>
-        <HighlightBox>
-          <HighlightTitle>HOME HIGHLIGHTS</HighlightTitle>
-          {this.props.highlights.map((highlight, index) => {
-            return (
-              <div key={index}>
-                <div><span style={{'fontWeight': '400'}}>{highlight.title} &#183; </span>{highlight.description}</div>
-                <RatingsContainer>
-                  <StyledLink href='#' style={linkColor} onMouseEnter={() => this.handleHoverOn()} onMouseLeave={() => this.handleHoverOff()}>Helpful
-                    <StyledThumb src='https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png'></StyledThumb></StyledLink>
-                  <span>&#183; </span>
-                  <StyledLink href='#' style={linkColor} onMouseEnter={() => this.handleHoverOn()} onMouseLeave={() => this.handleHoverOff()}>Not helpful
-                    </StyledLink>
-                </RatingsContainer>
-              </div>
-            );
-          })}
-        </HighlightBox>
-      </StyledHighlightBlock>
-    )
-  }
+const PromoBar = ({ miniAd, highlights }) => {
+  return(
+    <StyledHighlightBlock>
+      <AdBox>
+        <StyledBulb src={imageUrls.bulb}></StyledBulb>
+        <div style={{'fontWeight': '400'}}>{miniAd.title}</div>
+        <div>{miniAd.description}</div>
+      </AdBox>
+      <HighlightBox>
+        <HighlightTitle>HOME HIGHLIGHTS</HighlightTitle>
+        {highlights.map((highlight, index) => {
+          return (
+            <div key={index}>
+              <div><span style={{'fontWeight': '400'}}>{highlight.title} &#183; </span>{highlight.description}</div>
+              <StyledLink>Helpful<StyledThumb src={imageUrls.thumb}/></StyledLink>
+              <span>&#183; </span>
+              <StyledLink>Not helpful</StyledLink>
+            </div>
+          );
+        })}
+      </HighlightBox>
+    </StyledHighlightBlock>
+  )
 }
 
 export default PromoBar;

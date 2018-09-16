@@ -10,17 +10,6 @@ const StyledHeader = styled.div`
   margin-top: 18px;
 `;
 
-const TextContainer = styled.div`
-  margin-left: 0;
-  flex-basis: 550px;
-  padding-left: 10px;
-`;
-
-const ImageContainer = styled.div`
-  margin-right: 0;
-  flex-basis: 150px;
-`;
-
 const StyledPropertyType = styled.div`
   text-transform: uppercase;
   font-size: 11px;
@@ -65,17 +54,17 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
   return(
     <StyledHeader>
 
-      <TextContainer>
+      <div style={{'flexBasis': '550px'}}>
         <StyledPropertyType style={{color: '#734f21'}}>{propertyType}</StyledPropertyType>
         <StyledName>{name}</StyledName>
         <StyledLocation>{location}</StyledLocation>
         <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>
-      </TextContainer>
+      </div>
 
-      <ImageContainer>
+      <div style={{'flexBasis': '150px'}}>
         <StyledImage src={owner.image} id='ownerPic'></StyledImage>
         <StyledOwnerName>{owner.name}</StyledOwnerName>
-      </ImageContainer>
+      </div>
 
     </StyledHeader>
   )

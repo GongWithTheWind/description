@@ -69,13 +69,9 @@ class SleepArrangements extends React.Component {
     this.prevSlide = this.prevSlide.bind(this);
   }
 
-  prevSlide() {
+  prevSlide() {}
 
-  }
-
-  nextSlide() {
-
-  }
+  nextSlide() {}
 
   render() {
     return(
