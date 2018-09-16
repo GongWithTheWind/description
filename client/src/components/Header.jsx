@@ -65,7 +65,7 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
     <StyledHeader>
 
       <TextContainer>
-        <StyledPropertyType>{propertyType}</StyledPropertyType>
+        <StyledPropertyType style={{color: '#734f21'}}>{propertyType}</StyledPropertyType>
         <StyledName>{name}</StyledName>
         <StyledLocation>{location}</StyledLocation>
         <CapacityBar guests={guests} beds={beds} bathrooms={bathrooms}/>

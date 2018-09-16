@@ -6,6 +6,7 @@ const StyledContact = styled.button`
   color: #00abb2;
   border: none;
   outline: none;
+  padding: 0;
   margin: 20px 20px 10px 10px;
   font-size: 16px;
   font-weight: 500;

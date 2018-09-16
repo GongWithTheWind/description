@@ -25,7 +25,7 @@ const HighlightBox = styled.div`
   box-shadow: 0 0 2px #e6e6e6;
   margin: 20px 20px 10px 10px;
   padding: 15px 20px 15px 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 340;
   line-height: 1.4;
   letter-spacing: 0.25px;
@@ -54,7 +54,7 @@ const StyledLink = styled.a`
 `;
 
 const RatingsLine = styled.div`
-  margin: 4px 0px 8px 0px;
+  margin: 8px 0px 12px 0px;
 `;
 
 const highlightTitle = {

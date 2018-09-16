@@ -16,7 +16,6 @@ const StyledSleepArrangements = styled.div`
 `;
 
 const Container = styled.div`
-  position: relative;
   flex-basis: 700px;
   display: flex;
   flex-direction: row;
@@ -49,9 +48,8 @@ const RightArrow = styled.i`
   margin: 0 0 6px -6px;
   vertical-align: middle;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
   flex-grow: 0;
-`;
+  `;
 
 const LeftArrow = styled.i`
   border: solid;
@@ -61,7 +59,6 @@ const LeftArrow = styled.i`
   margin: 0 0 6px 4px;
   vertical-align: middle;
   transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
   flex-grow: 0;
 `;
 

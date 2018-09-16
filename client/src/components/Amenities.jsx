@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AmenityModal from './AmenityModal.jsx';
 
 const StyledAmenities = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -11,48 +12,110 @@ const StyledAmenities = styled.div`
   letter-spacing: 0.5px;
 `;
 
+const AmenitiesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
 const AmenityContainer = styled.div`
   display: flex;
+  margin: 4px 4px 4px -2px;
+`;
+
+const AmenityIcon = styled.img`
+  height: 32px;
+  width: 32px;
+  margin: -5px 5px 5px -5px;
 `;
 
 const imageUrls = {
   'essentials (towels, bedsheets, soap, toilet paper, pillows)': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png',
   'wifi': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png',
+  'shampoo': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png',
   'TV': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/TV.png',
+  'desk/workspace': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/laptopWorkspace.png',
   'fireplace': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/fireplace.png',
+  'parking': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png',
   'gym': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/gym.png',
   'pool': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/pool.png',
   'dining': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/dining.png',
-  'desk/workspace': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/laptopWorkspace.png',
-  'parking': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png',
   'hottub': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/hottub.png',
-  'shampoo': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png',
   'washer': 'https://s3-us-west-1.amazonaws.com/betterbnb-description/washer.png',
 };
+
+const ExpansionLink = styled.button`
+  font-size: 16px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: #00abb2;
+  padding: 0;
+  margin-top: 10px;
+`;
 
 const title = {
   fontSize: '16px',
   fontWeight: '500',
-  marginBottom: '5px'
+  marginBottom: '15px'
 };
 
-const assembleIcons = (basicAmenities) => {
-  let icons = {};
-  let count = 0;
-
-  while (count < 6) {}
-
+const capitalize = (word) => {
+  return word.slice(0, 1).toUpperCase() + word.slice(1);
 }
 
-const Amenities = () => {
-  return(
-    <div>
-    <StyledAmenities style={title}>Amenities</StyledAmenities>
-    <AmenityContainer>
+const assembleIcons = ({ basics, facilities, dining, safety }) => {
+  let icons = [];
+  let allAmenities = basics.concat(facilities, dining, safety);
 
-    </AmenityContainer>
-    </div>
-  )
+  for (let i = 0; i < allAmenities.length; i++) {
+    if (allAmenities[i] in imageUrls) {
+      icons.push([allAmenities[i], imageUrls[allAmenities[i]]]);
+    }
+    if (icons.length >= 6) { break; }
+  }
+  return icons;
+}
+
+const totalAmenities = ({ basics, facilities, dining, safety }) => {
+  return basics.concat(facilities, dining, safety).length;
+}
+
+class Amenities extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalIsOpen: false
+    };
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({
+      modalIsOpen: !this.state.modalIsOpen
+    });
+  }
+
+  render() {
+    let icons = assembleIcons(this.props.amenities);
+    let total = totalAmenities(this.props.amenities);
+    return(
+      <StyledAmenities>
+        <div style={title}>Amenities</div>
+        <AmenitiesContainer>
+          {icons.map((icon, index) => {
+            return(
+              <AmenityContainer key={index}>
+                <AmenityIcon src={icon[1]}></AmenityIcon>
+                <span>{capitalize(icon[0])}</span>
+              </AmenityContainer>
+            )
+          })}
+        </AmenitiesContainer>
+        <ExpansionLink onClick={() => {this.toggleModal()}}>Show all {total} amenities</ExpansionLink>
+        <AmenityModal show={this.state.modalIsOpen} amenities={this.props.amenities} onClose={this.toggleModal}/>
+      </StyledAmenities>
+    )
+  }
 }
 
 export default Amenities;

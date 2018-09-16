@@ -28,11 +28,13 @@ const SectionBreakLine = styled.hr`
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { home: data[0] };
+    this.state = { 
+      home: data[0]
+    };
   }
 
   componentDidMount() {
-    this.getHome(150);
+    this.getHome(101);
   }
 
   getHome(homeId) {

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const BedroomContainer = styled.div`
   box-shadow: 0 0 2px #e6e6e6;
   box-sizing: content-box;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 8px 20px 8px;
   padding: 15px 20px 15px 20px;
   font-size: 16px;
   font-weight: 320;

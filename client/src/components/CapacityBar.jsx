@@ -6,6 +6,7 @@ const StyledCapacityBar = styled.div`
   color: #484848;
   font-weight: 300;
   font-size: 15px;
+  margin-top: 30px;
 `;
 
 const StyledIcon = styled.img`

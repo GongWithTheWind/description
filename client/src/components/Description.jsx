@@ -4,26 +4,26 @@ import styled from 'styled-components';
 const DescriptionBox = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #484848;
-  margin: 20px 20px 30px 10px;
+  margin: 20px 20px 10px 10px;
   font-size: 15px;
   font-weight: 320;
   line-height: 1.4;
   letter-spacing: 0.75px;
 `;
 
+const ExpansionLink = styled.button`
+  font-size: 16px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: #00abb2;
+  padding: 0;
+`;
+
 const title = {
   fontSize: '16px',
   fontWeight: '400',
   marginBottom: '5px'
-};
-
-const link = {
-  fontSize: '16px',
-  border: 'none',
-  outline: 'none',
-  fontWeight: '500',
-  color: '#00abb2',
-  letterSpacing: '0.5px'
 };
 
 // This function is used where paragraph title is stored as camelCase property
@@ -59,24 +59,22 @@ class Description extends React.Component {
     if (this.state.showText) {
       return(
         <DescriptionBox>
-          {
-            Object.keys(this.props.description).map((keyName, keyIndex) => {
+          {Object.keys(this.props.description).map((keyName, keyIndex) => {
               return (
                 <div key={keyIndex}>
                   <div style={title}>{transformCase(keyName) === 'General' ? '' : transformCase(keyName)}</div>
                   <p>{this.props.description[keyName]}</p>
                 </div>
               )
-            })
-          }
-          <button style={link} onClick={() => this.toggleShowText()}>Hide &#9650;</button>
+          })}
+          <ExpansionLink onClick={() => this.toggleShowText()}>Hide &#9650;</ExpansionLink>
         </DescriptionBox>
       )
     } else {
       return(
         <DescriptionBox>
           <p>{this.props.description.general}</p>
-          <button style={link} onClick={() => this.toggleShowText()}>Read more about the space &#9660;</button>
+          <ExpansionLink onClick={() => this.toggleShowText()}>Read more about the space &#9660;</ExpansionLink>
         </DescriptionBox>
       )
     }
