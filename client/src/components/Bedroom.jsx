@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const BedroomContainer = styled.div`
   box-shadow: 0 0 2px #e6e6e6;
@@ -40,39 +41,58 @@ const countBeds = (beds, index) => {
   if (Array.isArray(beds)) {
     beds.forEach(bed => {
       if (doubles.includes(bed)) {
-        doublesCount++;
+        doublesCount += 1;
       } else if (singles.includes(bed)) {
-        singlesCount++;
+        singlesCount += 1;
       }
     });
   } else if (doubles.includes(beds)) {
-    doublesCount++;
+    doublesCount += 1;
   } else if (singles.includes(beds)) {
-    singlesCount++;
+    singlesCount += 1;
   }
   return [`Bedroom ${index + 1}`, doublesCount, singlesCount];
 }
 
 const pluralize = (category, quantity) => {
-  return quantity > 1 ? quantity.toString().concat(' ', category, 's') : quantity.toString().concat(' ', category); 
+  return quantity > 1 ? 
+    quantity.toString().concat(' ', category, 's') : 
+    quantity.toString().concat(' ', category); 
 };
 
 const Bedroom = ({ bedroom, index }) => {
   let arrangement = countBeds(bedroom, index);
   return (
     <BedroomContainer>
-      {Array(arrangement[1]).fill(imageUrls.doubleBed).map((image, i) => {
-        return <StyledBed src={image} key={i}></StyledBed>
+      {Array(arrangement[1])
+        .fill(imageUrls.doubleBed)
+        .map(image => {
+        return <StyledBed src={image}></StyledBed>
       })}
-      {Array(arrangement[2]).fill(imageUrls.singleBed).map((image, j) => {
-        return <StyledBed src={image} key={j}></StyledBed>
+      {Array(arrangement[2])
+        .fill(imageUrls.singleBed)
+          .map(image => {
+        return <StyledBed src={image}></StyledBed>
       })}
       <div style={title}>{arrangement[0]}</div>
-      {(arrangement[1] > 0) ? <div>{pluralize('double bed', arrangement[1])}</div> : <div></div>}
-      {(arrangement[2] > 0) ? <div>{pluralize('single bed', arrangement[2])}</div> : <div></div>}
+      {(arrangement[1] > 0) ? 
+        <div>{pluralize('double bed', arrangement[1])}</div> : 
+        <div></div>}
+      {(arrangement[2] > 0) ?
+        <div>{pluralize('single bed', arrangement[2])}</div> :
+        <div></div>}
     </BedroomContainer>
   )
-
 }
+
+Bedroom.propTypes = {
+  bedroom: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  index: PropTypes.number
+};
+
+Bedroom.defaultProps = {
+  bedroom: [],
+  index: 0
+};
 
 export default Bedroom;

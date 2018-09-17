@@ -1,6 +1,7 @@
 import React from 'react';
 import CapacityBar from './CapacityBar.jsx';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledHeader = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -68,6 +69,34 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
 
     </StyledHeader>
   )
+};
+
+Header.propTypes = {
+  propertyType: PropTypes.string,
+  name: PropTypes.string,
+  location: PropTypes.string,
+  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool])),
+  guests: PropTypes.number,
+  beds: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array])),
+  bathrooms: PropTypes.number
+};
+
+Header.defaultProps = {
+  propertyType: '',
+  name: '',
+  location: '',
+  owner: {
+    name: '',
+    image: '',
+    contact: '',
+    badge: false
+  },
+  guests: 0,
+  beds: {
+    bedrooms: [],
+    commonSpace: []
+  },
+  bathrooms: 0
 };
 
 export default Header;

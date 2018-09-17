@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const DescriptionBox = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -32,7 +33,7 @@ const title = {
 const transformCase = (camelCase) => {
   let output = '';
   camelCase.split('').forEach(letter => {
-    if (letter == letter.toUpperCase()) {
+    if (letter === letter.toUpperCase()) {
       output = output.concat(' ', letter.toLowerCase());
     } else {
       output = output.concat(letter);
@@ -49,34 +50,51 @@ class Description extends React.Component {
   }
 
   toggleShowText() {
-    let newState = this.state.showText ? false : true;
-    this.setState({ showText: newState });
+    this.setState((prevState) => ({ showText: !prevState.showText }));
   }
 
   render() {
+    const { description } = this.props;
     if (this.state.showText) {
       return(
         <DescriptionBox>
-          {Object.keys(this.props.description).map((keyName, keyIndex) => {
+          {Object.keys(description).map((keyName) => {
               return (
-                <div key={keyIndex}>
-                  <div style={title}>{transformCase(keyName) === 'General' ? '' : transformCase(keyName)}</div>
-                  <p>{this.props.description[keyName]}</p>
+                <div>
+                  <div style={title}>{transformCase(keyName) === 'General' ?
+                    '' : transformCase(keyName)}</div>
+                  <p>{description[keyName]}</p>
                 </div>
               )
           })}
-          <ExpansionLink onClick={() => this.toggleShowText()}>Hide &#9650;</ExpansionLink>
+          <ExpansionLink 
+            onClick={() => this.toggleShowText()}>Hide &#9650;</ExpansionLink>
         </DescriptionBox>
       )
     } else {
       return(
         <DescriptionBox>
-          <p>{this.props.description.general}</p>
-          <ExpansionLink onClick={() => this.toggleShowText()}>Read more about the space &#9660;</ExpansionLink>
+          <p>{description.general}</p>
+          <ExpansionLink 
+            onClick={() => this.toggleShowText()}>Read more about the space &#9660;</ExpansionLink>
         </DescriptionBox>
       )
     }
   }
-}
+};
+
+Description.propTypes = {
+  description: PropTypes.objectOf(PropTypes.string)
+};
+
+Description.defaultProps = {
+  description: {
+    general: '',
+    theSpace: '',
+    guestAccess: '',
+    interactionWithGuests: '',
+    otherThings: ''
+  }
+};
 
 export default Description;

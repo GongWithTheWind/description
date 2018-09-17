@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import AmenityModal from './AmenityModal.jsx';
 
 const StyledAmenities = styled.div`
@@ -66,7 +67,7 @@ const capitalize = (word) => {
 const assembleIcons = ({ basics, facilities, dining, safety }) => {
   let icons = [];
   let allAmenities = basics.concat(facilities, dining, safety);
-  for (let i = 0; i < allAmenities.length; i++) {
+  for (let i = 0; i < allAmenities.length; i += 1) {
     if (allAmenities[i] in imageUrls) {
       icons.push([allAmenities[i], imageUrls[allAmenities[i]]]);
     }
@@ -89,21 +90,22 @@ class Amenities extends React.Component {
   }
 
   toggleModal() {
-    this.setState({
-      modalIsOpen: !this.state.modalIsOpen
-    });
+    this.setState((prevState) => ({
+      modalIsOpen: !prevState.modalIsOpen
+    }));
   }
 
   render() {
-    let icons = assembleIcons(this.props.amenities);
-    let total = totalAmenities(this.props.amenities);
+    const { amenities } = this.props;
+    let icons = assembleIcons(amenities);
+    let total = totalAmenities(amenities);
     return(
       <StyledAmenities>
         <div style={title}>Amenities</div>
         <AmenitiesContainer>
-          {icons.map((icon, index) => {
+          {icons.map(icon => {
             return(
-              <AmenityContainer key={index}>
+              <AmenityContainer>
                 <AmenityIcon src={icon[1]}></AmenityIcon>
                 <span>{capitalize(icon[0])}</span>
               </AmenityContainer>
@@ -111,10 +113,26 @@ class Amenities extends React.Component {
           })}
         </AmenitiesContainer>
         <ExpansionLink onClick={() => {this.toggleModal()}}>Show all {total} amenities</ExpansionLink>
-        <AmenityModal show={this.state.modalIsOpen} amenities={this.props.amenities} onClose={this.toggleModal}/>
+        <AmenityModal 
+          show={this.state.modalIsOpen} 
+          amenities={amenities} 
+          onClose={this.toggleModal}/>
       </StyledAmenities>
     )
   }
-}
+};
+
+Amenities.propTypes = {
+  amenities: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array]))
+};
+
+Amenities.defaultProps = {
+  amenities: {
+    basics: [],
+    facilities: [],
+    dining: [],
+    safety: []
+  }
+};
 
 export default Amenities;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledCapacityBar = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -59,6 +60,21 @@ const CapacityBar = ({ guests, beds, bathrooms }) => {
       </PairContainer> 
     </StyledCapacityBar>
   )
+};
+
+CapacityBar.propTypes = {
+  guests: PropTypes.number,
+  beds: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array])),
+  bathrooms: PropTypes.number
+};
+
+CapacityBar.defaultProps = {
+  guests: 0,
+  beds: {
+    bedrooms: [],
+    commonSpace: []
+  },
+  bathrooms: 0
 };
 
 export default CapacityBar;

@@ -39,8 +39,8 @@ class App extends React.Component {
       .then(response => {
         return response.json();
       })
-      .then(data => {
-        this.setState({ home: data[0] });
+      .then(results => {
+        this.setState({ home: results[0] });
       });
   }
 

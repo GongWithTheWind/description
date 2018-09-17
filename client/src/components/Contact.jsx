@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledContact = styled.button`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -61,27 +62,45 @@ class Contact extends React.Component {
   }
 
   toggleModal() {
-    this.setState({ showModal: !this.state.showModal });
+    this.setState((prevState) => ({ showModal: !prevState.showModal }));
   }
 
   render() {
+    const { contact } = this.props.owner;
     if (!this.state.showModal) {
-      return <StyledContact link={this.props.owner.contact} onClick={() => this.toggleModal()}>Contact host</StyledContact>
+      return <StyledContact 
+        link={contact} 
+        onClick={() => this.toggleModal()}>Contact host</StyledContact>
     } else {
       return(
         <div>
-          <StyledContact link={this.props.owner.contact}>Contact host</StyledContact>
+          <StyledContact link={contact}>Contact host</StyledContact>
           <Backdrop>
             <EmailContact>
               <CloseButton type='image' src={imageUrls.close} onClick={() => this.toggleModal()}></CloseButton>
               <div style={{'fontWeight': '400'}}>Email host at:</div>
-              <div>{this.props.owner.contact}</div>
+              <div>{contact}</div>
             </EmailContact>
           </Backdrop>
         </div>
       )
     }
   }
-}
+};
+
+Contact.propTypes = {
+  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool])),
+  contact: PropTypes.string
+};
+
+Contact.defaultProps = {
+  owner: {
+    name: '',
+    image: '',
+    contact: '',
+    badge: false
+  },
+  contact: ''
+};
 
 export default Contact;

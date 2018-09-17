@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Additional features to add:
 // Use @media media queries to remove mini-ad from display when window is resized
@@ -87,6 +88,16 @@ const PromoBar = ({ miniAd, highlights }) => {
       </HighlightBox>
     </StyledHighlightBlock>
   )
-}
+};
+
+PromoBar.propTypes = {
+  miniAd: PropTypes.string,
+  highlights: PropTypes.array
+};
+
+PromoBar.defaultProps = {
+  miniAd: '',
+  highlights: []
+};
 
 export default PromoBar;

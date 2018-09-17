@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Bedroom from './Bedroom.jsx';
+import PropTypes from 'prop-types';
 
 // Additional features to implement:
 // List out type of bed for each bedroom
@@ -63,8 +64,8 @@ const LeftArrow = styled.i`
 `;
 
 class SleepArrangements extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {};
     this.prevSlide = this.prevSlide.bind(this);
   }
@@ -74,14 +75,15 @@ class SleepArrangements extends React.Component {
   nextSlide() {}
 
   render() {
+    const { beds:{ bedrooms, commonSpace } } = this.props;
     return(
       <StyledSleepArrangements>
         <div>Sleeping arrangements</div>
         <Container>
           <ArrowButton onClick={() => this.prevSlide()}><LeftArrow /></ArrowButton>
           <Carousel>
-            {this.props.beds.bedrooms.map((bedroom, index) => {
-              return <Bedroom bedroom={bedroom} key={index} index={index} />
+            {bedrooms.map((bedroom, index) => {
+              return <Bedroom bedroom={bedroom} index={index} />
             })}
           </Carousel>
           <ArrowButton onClick={() => this.nextSlide()}><RightArrow /></ArrowButton>
@@ -89,6 +91,17 @@ class SleepArrangements extends React.Component {
       </StyledSleepArrangements>
     )
   }
-}
+};
+
+SleepArrangements.propTypes = {
+  beds: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array]))
+};
+
+SleepArrangements.defaultProps = {
+  beds: {
+    bedrooms: [],
+    commonSpace: []
+  }
+};
 
 export default SleepArrangements;

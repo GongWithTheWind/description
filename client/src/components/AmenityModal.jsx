@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Backdrop = styled.div`
   position: fixed;
@@ -48,32 +49,51 @@ const Title = styled.div`
   font-weight: 500;
 `;
 
+const imageUrls = {
+  close: 'https://s3-us-west-1.amazonaws.com/betterbnb-description/closeButton.png'
+};
+
 const listAmenities = (list) => {
-  return list.map((amenity, index) => {
-    return <div key={index}>{amenity}<SectionBreakLine /></div>
+  return list.map(amenity => {
+    return <div>{amenity}<SectionBreakLine /></div>
   })
 }
 
-class AmenityModal extends React.Component {
-  render() {
-    if(!this.props.show) { return null; }
+const AmenityModal = ({ show, onClose, amenities }) => {
+    if(!show) { return null; }
     return (
       <Backdrop>
         <AmenityList>
-          <CloseButton type='image' src='https://s3-us-west-1.amazonaws.com/betterbnb-description/closeButton.png' onClick={this.props.onClose}></CloseButton>
+          <CloseButton type='image' src={imageUrls.close} onClick={onClose}></CloseButton>
           <Title style={{'fontSize': '24px'}}>Amenities</Title>
           <Title>Basics</Title>
-          <div>{listAmenities(this.props.amenities.basics)}</div>
+          <div>{listAmenities(amenities.basics)}</div>
           <Title>Facilities</Title>
-          <div>{listAmenities(this.props.amenities.facilities)}</div>
+          <div>{listAmenities(amenities.facilities)}</div>
           <Title>Dining</Title>
-          <div>{listAmenities(this.props.amenities.dining)}</div>
+          <div>{listAmenities(amenities.dining)}</div>
           <Title>Safety</Title>
-          <div>{listAmenities(this.props.amenities.safety)}</div>
+          <div>{listAmenities(amenities.safety)}</div>
         </AmenityList>
       </Backdrop>
     );
+};
+
+AmenityModal.propTypes = {
+  show: PropTypes.bool,
+  onClose: PropTypes.func,
+  amenities: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array]))
+};
+
+AmenityModal.defaultProps = {
+  show: false,
+  onClose: () => {},
+  amenities: {
+    basics: [],
+    facilities: [],
+    dining: [],
+    safety: []
   }
-}
+};
 
 export default AmenityModal;
