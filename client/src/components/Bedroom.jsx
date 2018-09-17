@@ -13,6 +13,7 @@ const BedroomContainer = styled.div`
   letter-spacing: 0.5px;
   flex-grow: 1;
   flex-shrink: 1;
+  min-width: 150px;
 `;
 
 const StyledBed = styled.img`

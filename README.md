@@ -37,16 +37,13 @@ npm install
 npm install -g node-mongo-seeds
 npm install -g gulp
 
-Generate fake data:
+For Developement:
+
+Generate mock data:
 node ./description_data_generator.js
 
 Seed data:
-seed
-
-Test:
-npm run test
-
-For Developement:
+npm run seed
 
 To start database:
 mongod
@@ -57,6 +54,9 @@ nodemon ./server/index.js
 
 To transpile client files:
 npm run react-dev
+
+Test:
+npm run test
 
 ```
 

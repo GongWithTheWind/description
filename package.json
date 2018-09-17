@@ -8,7 +8,8 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "test": "jest && gulp lint"
+    "test": "jest && gulp lint",
+    "seed": "mongoimport --db description --collection descriptions < ./seeds/descriptions.json --jsonArray"
   },
   "jest": {
     "setupFiles": [

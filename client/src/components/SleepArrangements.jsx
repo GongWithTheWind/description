@@ -25,8 +25,10 @@ const Container = styled.div`
 
 const Carousel = styled.div`
   display: flex;
+  flex-basis: 550px;
   flex-direction: row;
   flex-grow: 1;
+  overflow: scroll;
 `;
 
 const ArrowButton = styled.button`
