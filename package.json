@@ -32,7 +32,6 @@
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "mongoose": "^5.2.13",
-    "node-mongo-seeds": "^3.1.0",
     "nodemon": "^1.18.4",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
@@ -56,6 +55,7 @@
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "lorem-ipsum": "^1.0.6",
+    "node-mongo-seeds": "^3.1.0",
     "styled-components": "^4.0.0-beta.3-side-effect-test",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"

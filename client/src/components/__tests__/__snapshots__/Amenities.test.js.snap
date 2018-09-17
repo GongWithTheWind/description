@@ -14,9 +14,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
     Amenities
   </div>
   <ForwardRef>
-    <ForwardRef
-      key="0"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png"
       />
@@ -24,9 +22,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Wifi
       </span>
     </ForwardRef>
-    <ForwardRef
-      key="1"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/fireplace.png"
       />
@@ -34,9 +30,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Fireplace
       </span>
     </ForwardRef>
-    <ForwardRef
-      key="2"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/TV.png"
       />
@@ -44,9 +38,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         TV
       </span>
     </ForwardRef>
-    <ForwardRef
-      key="3"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png"
       />
@@ -54,9 +46,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Essentials (towels, bedsheets, soap, toilet paper, pillows)
       </span>
     </ForwardRef>
-    <ForwardRef
-      key="4"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png"
       />
@@ -64,9 +54,7 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Shampoo
       </span>
     </ForwardRef>
-    <ForwardRef
-      key="5"
-    >
+    <ForwardRef>
       <ForwardRef
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png"
       />

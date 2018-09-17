@@ -8,79 +8,99 @@ exports[`<App /> should render correctly with no props 1`] = `
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -90,109 +110,129 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <PromoBar
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -202,109 +242,129 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <Description
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -314,109 +374,130 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <Contact
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
+    contact=""
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -426,110 +507,130 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <ForwardRef />
   <Amenities
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -539,110 +640,130 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <ForwardRef />
   <SleepArrangements
     amenities={
       Object {
         "basics": Array [
-          "smoking allowed",
-          "wifi",
-          "air conditioning",
-          "fireplace",
           "TV",
+          "fireplace",
+          "closet/drawers",
+          "air conditioning",
           "essentials (towels, bedsheets, soap, toilet paper, pillows)",
+          "pets allowed",
           "shampoo",
+          "heating",
           "parking",
           "iron",
-          "pets allowed",
-          "heating",
-          "desk/workspace",
         ],
         "dining": Array [
-          "grill",
-          "breakfast",
-          "coffee/tea",
           "pizza oven",
+          "grill",
+          "coffee/tea",
         ],
         "facilities": Array [
           "washer",
-          "pool",
           "gym",
+          "pool",
+          "jacuzzi",
         ],
-        "safety": "safety card",
+        "safety": "carbon monoxide detector",
       }
     }
-    bathrooms={15}
+    bathrooms={16}
     beds={
       Object {
         "bedrooms": Array [
           Array [
+            "futon",
+            "king",
+            "floor mattress",
+            "queen",
+            "double",
+            "twin",
+            "couch",
+          ],
+          Array [
+            "queen",
             "floor mattress",
             "king",
             "twin",
+            "futon",
+          ],
+          Array [
+            "king",
+            "twin",
+            "couch",
+          ],
+          "futon",
+          Array [
+            "queen",
+            "floor mattress",
+            "couch",
+            "futon",
+            "twin",
             "double",
           ],
-          "queen",
         ],
         "commonSpace": Array [
+          "double",
           "king",
-          "couch",
-          "queen",
           "floor mattress",
         ],
       }
     }
     description={
       Object {
-        "general": "Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.",
-        "guestAccess": "Mollit esse excepteur dolore nisi minim ea consectetur excepteur Lorem. Amet reprehenderit cupidatat laboris consectetur ipsum anim laboris non laborum. Cillum cillum amet dolore ea excepteur Lorem adipisicing dolor ullamco velit duis. Est anim deserunt eiusmod ex consequat proident consectetur laborum ipsum velit.
+        "general": "Qui dolore amet reprehenderit commodo eu occaecat fugiat nulla mollit est exercitation magna incididunt. Ullamco cillum quis sit elit velit laborum. Officia ut dolore laboris sit exercitation mollit nulla elit ullamco. Deserunt veniam tempor cupidatat sit elit nulla fugiat. Est nisi adipisicing fugiat velit ad ad eiusmod adipisicing sit nostrud commodo magna duis incididunt. Velit eiusmod dolor anim nulla anim enim laboris. Consequat deserunt culpa voluptate occaecat reprehenderit cillum irure incididunt.
 
-Eu Lorem excepteur excepteur reprehenderit tempor tempor quis magna Lorem sit incididunt velit. Nostrud tempor non dolore sint quis nulla culpa labore aliqua ut. Esse magna excepteur non excepteur id eiusmod fugiat velit magna proident. Adipisicing laboris ullamco do amet reprehenderit consectetur magna culpa. Sit magna irure enim consectetur laboris proident officia proident ut irure id.
+Fugiat irure velit adipisicing elit ea non laborum cupidatat enim minim veniam nisi ad cupidatat. Elit dolor exercitation cupidatat Lorem laboris est ut nisi sunt aliqua fugiat laborum consectetur. Nisi pariatur duis Lorem deserunt reprehenderit nostrud nostrud commodo sit cupidatat. Veniam do ad. Consectetur elit cillum anim ad veniam. Incididunt aliqua magna nulla sit excepteur veniam aute duis.
 
-Et in laboris. Commodo tempor enim deserunt nulla exercitation nostrud anim velit voluptate minim. Anim veniam exercitation. Eu elit ullamco cupidatat. Et Lorem minim nostrud voluptate.",
-        "interactionWithGuests": "Occaecat labore voluptate pariatur proident aliquip esse proident ad voluptate eiusmod laborum non. Do ipsum nisi velit veniam non. Amet mollit voluptate esse occaecat exercitation mollit consequat do adipisicing mollit. Anim culpa dolore eiusmod incididunt.
+Ex nisi ipsum occaecat adipisicing Lorem proident sit consequat amet. Commodo fugiat deserunt voluptate dolore reprehenderit in. Ea officia sint laborum reprehenderit consectetur aute dolore do fugiat in. Consectetur duis ea consequat elit eiusmod aliquip fugiat ullamco nulla dolore. Ex dolor ad fugiat enim fugiat.",
+        "guestAccess": "Ut reprehenderit nisi minim adipisicing veniam quis velit minim fugiat do. Cupidatat consectetur eiusmod est fugiat laborum. Ut aute anim tempor reprehenderit cillum. Non nulla qui magna excepteur dolor enim culpa eu ex voluptate deserunt quis. Laborum aliqua duis cupidatat minim ullamco ullamco sint nostrud consectetur irure duis laborum ipsum reprehenderit.
 
-Id adipisicing ad ut sit eiusmod nisi consequat occaecat id. Pariatur eiusmod nulla minim mollit occaecat velit. Nisi pariatur id duis fugiat sint. Eiusmod consequat eiusmod officia minim dolore incididunt in cillum pariatur fugiat. Ea ut dolor incididunt aliqua minim.
+Tempor labore ad irure id eu. Amet irure sint esse ut aliqua consectetur. Sint proident incididunt adipisicing ut. Do amet incididunt excepteur excepteur consectetur. Eiusmod in reprehenderit laboris laborum fugiat cillum sit sunt sit. Nisi ea ipsum anim laborum sunt. Irure ea officia aute ullamco.",
+        "interactionWithGuests": "Eiusmod aliqua velit fugiat nulla cupidatat non sint ipsum. Non cupidatat excepteur consequat proident ipsum pariatur magna ex ipsum mollit laborum elit ea. Ex irure eu.
 
-Quis enim enim dolore qui consequat duis. Sint incididunt fugiat ex proident ad cillum voluptate sit. Deserunt sint do sunt commodo ad deserunt tempor.",
-        "otherThings": "Et nisi irure esse id sit ex eu ullamco excepteur officia amet adipisicing. Aliquip et irure do pariatur qui velit dolore dolor consequat reprehenderit irure. Labore anim officia nostrud excepteur adipisicing qui incididunt.
+Non enim dolor mollit laboris. Ut aliquip non non laboris. Nostrud duis reprehenderit excepteur qui do ut nulla nulla ea. Do qui et deserunt ex minim occaecat ut occaecat veniam anim aute exercitation sit. Qui laboris duis esse nisi nostrud nisi consequat excepteur nostrud veniam. Reprehenderit tempor ad sint labore officia cupidatat.
 
-Quis aliquip culpa dolor minim adipisicing mollit ullamco qui tempor. Aliquip reprehenderit elit minim veniam reprehenderit magna. Cillum et magna sint anim officia proident fugiat Lorem eu. Culpa nostrud culpa cupidatat amet in.
+Esse mollit exercitation. Aliquip reprehenderit tempor non eu. Eiusmod deserunt non ipsum culpa dolor pariatur nulla proident est et ullamco. Minim duis non ad eu ipsum cillum occaecat consectetur sint ex et veniam qui. Ad veniam consequat est est officia cillum. Duis pariatur aliqua laborum id nulla ea.",
+        "otherThings": "Reprehenderit eiusmod exercitation consequat tempor laboris non fugiat minim sint proident. Quis ullamco occaecat ipsum velit. Esse anim magna ipsum. Qui sit non Lorem deserunt culpa et nostrud cillum culpa qui mollit.
 
-Incididunt sint non sit irure Lorem laborum amet reprehenderit Lorem consequat reprehenderit. Labore sunt mollit amet voluptate commodo sint duis. Laboris aliqua fugiat qui qui sint pariatur ad occaecat qui aliquip voluptate ex occaecat. Amet ullamco ut quis minim eiusmod adipisicing dolore. Est fugiat consectetur irure consectetur duis. Est mollit elit esse voluptate est aliqua minim id dolore sint. Ea labore quis elit.",
-        "theSpace": "Duis voluptate tempor velit velit Lorem dolor deserunt consequat ullamco voluptate occaecat nostrud. Sit labore ex id velit. Eu cupidatat do commodo ex enim ad in sint duis consequat aute tempor.
+Cupidatat aliqua in laboris dolore fugiat enim pariatur consectetur. Nostrud velit non sint et officia culpa duis ex. Sunt amet et ea aliqua commodo. Ea velit quis culpa nulla exercitation ad dolor mollit nostrud eiusmod irure. Amet anim consectetur nisi ut laborum magna ipsum reprehenderit esse amet mollit enim Lorem quis.",
+        "theSpace": "Occaecat aliqua voluptate ipsum elit. Lorem eiusmod eiusmod veniam ea excepteur magna pariatur laboris laborum enim. Minim reprehenderit minim voluptate non aute.
 
-Enim voluptate amet aliquip et est ipsum tempor et enim. Incididunt aliqua est esse qui labore Lorem nisi Lorem aliquip adipisicing nisi. Do in sint do et voluptate qui.
+Laborum aliquip fugiat. Ipsum velit labore nisi culpa ad. Ipsum exercitation sunt commodo cupidatat labore enim eiusmod nisi.
 
-Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Mollit esse cillum quis voluptate veniam. Irure voluptate sunt do ex voluptate est minim ut laboris do. Laboris sunt adipisicing excepteur nisi proident tempor laboris cupidatat laboris excepteur aliqua.",
+Fugiat aliqua nisi qui. Officia velit aute nulla adipisicing esse reprehenderit amet nulla irure ea nostrud culpa. Magna qui Lorem ex non incididunt veniam in laborum. Aliquip nostrud proident occaecat sint magna. Nisi sit consequat consequat ut est proident officia magna enim elit consectetur ullamco elit.",
       }
     }
-    guests={9}
+    guests={3}
     highlights={
       Array [
         Object {
@@ -652,31 +773,31 @@ Minim sit cupidatat duis enim consectetur consectetur quis eiusmod labore. Molli
           "title": "Hot tub",
         },
         Object {
-          "description": "94% of recent guests gave this home’s value a 5-star rating.",
+          "description": "17 recent guests have said that this home was sparkling clean.",
           "helpful": 0,
           "notHelpful": 0,
-          "title": "Great value",
+          "title": "Sparkling clean",
         },
       ]
     }
     homeId={100}
-    location="Mandalay, Myanmar"
+    location="Nagpur, India"
     miniAd={
       Object {
         "description": "It’s been viewed 500+ times in the past week.",
         "title": "This home is on people’s minds.",
       }
     }
-    name="Romantic Cabana"
+    name="Designer Loft"
     owner={
       Object {
-        "badge": true,
+        "badge": false,
         "contact": "jpjohnson@gmail.com",
-        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg",
-        "name": "Michaelangelo",
+        "image": "https://s3-us-west-1.amazonaws.com/betterbnb-description/person5.jpeg",
+        "name": "Joe & Pete",
       }
     }
-    propertyType="earth house"
+    propertyType="tiny house"
   />
   <ForwardRef />
 </ForwardRef>

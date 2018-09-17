@@ -37,7 +37,7 @@ npm install
 npm install -g node-mongo-seeds
 
 Generate fake data:
-node ./data/description_data_generator.js
+node ./description_data_generator.js
 
 Seed data:
 seed

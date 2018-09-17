@@ -31,7 +31,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getHome(100);
+    this.getHome(180);
   }
 
   getHome(homeId) {
@@ -45,6 +45,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.home);
     return (
       <ModuleContainer id="home">
           <Header {...this.state.home}/>

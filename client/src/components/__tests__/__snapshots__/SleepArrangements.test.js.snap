@@ -22,12 +22,10 @@ exports[`<SleepArrangements /> should render correctly with props 1`] = `
           ]
         }
         index={0}
-        key="0"
       />
       <Bedroom
         bedroom="queen"
         index={1}
-        key="1"
       />
     </ForwardRef>
     <ForwardRef

@@ -113,7 +113,8 @@ const generateHouse = (homeId) => {
     location: randomize(locations),
     guests: randomize(guestQuantity),
     beds: {
-      bedrooms: [randomize(beds, true), randomize(beds, true)],
+      bedrooms: randomize([randomize(beds, true), randomize(beds, true), randomize(beds, true), 
+        randomize(beds, true), randomize(beds, true), randomize(beds, true)], true),
       commonSpace: randomize(beds, true)
     },
     bathrooms: randomize(bathroomQuantity),
