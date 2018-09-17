@@ -2,7 +2,13 @@
 
 exports[`<Header /> should render correctly with props 1`] = `
 <ForwardRef>
-  <ForwardRef>
+  <div
+    style={
+      Object {
+        "flexBasis": "550px",
+      }
+    }
+  >
     <ForwardRef
       style={
         Object {
@@ -41,8 +47,14 @@ exports[`<Header /> should render correctly with props 1`] = `
       }
       guests={9}
     />
-  </ForwardRef>
-  <ForwardRef>
+  </div>
+  <div
+    style={
+      Object {
+        "flexBasis": "150px",
+      }
+    }
+  >
     <ForwardRef
       id="ownerPic"
       src="https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg"
@@ -50,6 +62,6 @@ exports[`<Header /> should render correctly with props 1`] = `
     <ForwardRef>
       Michaelangelo
     </ForwardRef>
-  </ForwardRef>
+  </div>
 </ForwardRef>
 `;

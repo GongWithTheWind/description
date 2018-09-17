@@ -40,36 +40,16 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
         This is one of few homes in this area that has this feature.
       </div>
       <ForwardRef>
+        Helpful
         <ForwardRef
-          href="#"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "#898989",
-            }
-          }
-        >
-          Helpful
-          <ForwardRef
-            src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
-          />
-        </ForwardRef>
-        <span>
-          · 
-        </span>
-        <ForwardRef
-          href="#"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "#898989",
-            }
-          }
-        >
-          Not helpful
-        </ForwardRef>
+          src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
+        />
+      </ForwardRef>
+      <span>
+        · 
+      </span>
+      <ForwardRef>
+        Not helpful
       </ForwardRef>
     </div>
     <div
@@ -89,36 +69,16 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
         94% of recent guests gave this home’s value a 5-star rating.
       </div>
       <ForwardRef>
+        Helpful
         <ForwardRef
-          href="#"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "#898989",
-            }
-          }
-        >
-          Helpful
-          <ForwardRef
-            src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
-          />
-        </ForwardRef>
-        <span>
-          · 
-        </span>
-        <ForwardRef
-          href="#"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "#898989",
-            }
-          }
-        >
-          Not helpful
-        </ForwardRef>
+          src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
+        />
+      </ForwardRef>
+      <span>
+        · 
+      </span>
+      <ForwardRef>
+        Not helpful
       </ForwardRef>
     </div>
   </ForwardRef>
