@@ -91,12 +91,12 @@ const PromoBar = ({ miniAd, highlights }) => {
 };
 
 PromoBar.propTypes = {
-  miniAd: PropTypes.string,
+  miniAd: PropTypes.objectOf(PropTypes.string),
   highlights: PropTypes.array
 };
 
 PromoBar.defaultProps = {
-  miniAd: '',
+  miniAd: {},
   highlights: []
 };
 

@@ -4,7 +4,7 @@ import Bedroom from './Bedroom.jsx';
 import PropTypes from 'prop-types';
 
 // Additional features to implement:
-// List out type of bed for each bedroom
+// List out type of bed for each bedroom, and beds for common space
 // Complete sleep arrangement carousel (update data to include >2 bedrooms max)
 
 const StyledSleepArrangements = styled.div`
@@ -21,7 +21,7 @@ const Container = styled.div`
   flex-basis: 700px;
   display: flex;
   flex-direction: row;
-`;
+  `;
 
 const Carousel = styled.div`
   display: flex;
@@ -66,13 +66,23 @@ const LeftArrow = styled.i`
 class SleepArrangements extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      currentIndex: 0
+    };
     this.prevSlide = this.prevSlide.bind(this);
   }
 
-  prevSlide() {}
+  prevSlide() {
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex - 1
+    }));
+  }
 
-  nextSlide() {}
+  nextSlide() {
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex + 1
+    }));
+  }
 
   render() {
     const { beds:{ bedrooms, commonSpace } } = this.props;
