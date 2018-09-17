@@ -35,6 +35,7 @@ From within the root directory:
 ```sh
 npm install
 npm install -g node-mongo-seeds
+npm install -g gulp
 
 Generate fake data:
 node ./description_data_generator.js
@@ -43,7 +44,6 @@ Seed data:
 seed
 
 Test:
-./node_modules/.bin/eslint <file-name> --fix
 npm run test
 
 For Developement:

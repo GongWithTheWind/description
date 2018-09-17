@@ -8,7 +8,7 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "test": "jest"
+    "test": "jest && gulp lint"
   },
   "jest": {
     "setupFiles": [
@@ -52,6 +52,10 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.1.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "lorem-ipsum": "^1.0.6",
