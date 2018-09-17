@@ -37,20 +37,25 @@ npm install
 npm install -g node-mongo-seeds
 npm install -g gulp
 
+npm run start-db
+npm run start
+```
+
 For Developement:
 
+```sh
 Generate mock data:
 node ./description_data_generator.js
 
 Seed data:
 npm run seed
 
-To start database:
+To start database & db-client:
 mongod
 mongo --host 127.0.0.1:27017
 
 To start server:
-nodemon ./server/index.js
+npm run start
 
 To transpile client files:
 npm run react-dev

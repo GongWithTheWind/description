@@ -8,6 +8,8 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
+    "start-db": "mongod", 
+    "start": "nodemon ./server/index.js",
     "test": "jest && gulp lint",
     "seed": "mongoimport --db description --collection descriptions < ./seeds/descriptions.json --jsonArray"
   },
