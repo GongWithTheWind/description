@@ -45,7 +45,7 @@ describe('<Header />', () => {
   });
 
   it('should render image for owner\'s picture', () => {
-    expect(wrapper.find('img').length).toEqual(1);
+    expect(wrapper.find('#ownerPic').length).toEqual(1);
   });
 
   it('should have subcomponent called CapacityBar', () => {

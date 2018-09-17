@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Description /> should render correctly with props 1`] = `
-<h5>
-  Description
-</h5>
+<ForwardRef>
+  <p>
+    Adipisicing non sit id dolor et esse nulla qui velit aliqua velit dolor adipisicing anim. Amet consequat excepteur anim esse qui deserunt aute sint aute dolor velit. Labore dolor occaecat aliqua ea veniam ea sit commodo minim ullamco sint veniam. Tempor voluptate sint esse. Cupidatat ad labore laboris irure est commodo. Officia adipisicing velit.
+  </p>
+  <ForwardRef
+    onClick={[Function]}
+  >
+    Read more about the space ▼
+  </ForwardRef>
+</ForwardRef>
 `;

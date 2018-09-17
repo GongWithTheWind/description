@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'isomorphic-fetch';
 import Header from './Header.jsx';
 import PromoBar from './PromoBar.jsx';
@@ -8,6 +7,22 @@ import Contact from './Contact.jsx';
 import Amenities from './Amenities.jsx';
 import SleepArrangements from './SleepArrangements.jsx';
 import data from './../../../seeds/descriptions.json';
+import styled from 'styled-components';
+
+const ModuleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+`;
+
+const SectionBreakLine = styled.hr`
+  margin: 20px 20px 10px 10px;
+  border: 0;
+  height: 1px;
+  background-color: #e6e6e6;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +31,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getHome(160);
+    this.getHome(100);
   }
 
   getHome(homeId) {
@@ -24,22 +39,24 @@ class App extends React.Component {
       .then(response => {
         return response.json();
       })
-      .then(data => {
-        this.setState({ home: data[0] });
+      .then(results => {
+        this.setState({ home: results[0] });
       });
   }
 
   render() {
     return (
-      <div id="home">
-        <h1>{this.state.home.homeId}</h1>
-        <Header {...this.state.home}/>
-        <PromoBar />
-        <Description />
-        <Contact />
-        <Amenities />
-        <SleepArrangements />
-      </div>
+      <ModuleContainer id="home">
+          <Header {...this.state.home}/>
+          <PromoBar {...this.state.home}/>
+          <Description {...this.state.home}/>
+          <Contact {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+          <Amenities {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+          <SleepArrangements {...this.state.home}/>
+          <SectionBreakLine></SectionBreakLine>
+      </ModuleContainer>
     )
   }
 }

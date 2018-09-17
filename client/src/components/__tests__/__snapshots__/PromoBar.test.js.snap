@@ -1,7 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PromoBar /> should render correctly with props 1`] = `
-<h5>
-  PromoBar
-</h5>
+<ForwardRef>
+  <ForwardRef>
+    <ForwardRef
+      src="https://a0.muscache.com/airbnb/static/page3/icon-uc-light-bulb-b34f4ddc543809b3144949c9e8cfcc8d.gif"
+    />
+    <div
+      style={
+        Object {
+          "fontWeight": "400",
+        }
+      }
+    >
+      This home is on people’s minds.
+    </div>
+    <div>
+      It’s been viewed 500+ times in the past week.
+    </div>
+  </ForwardRef>
+  <ForwardRef>
+    <ForwardRef>
+      HOME HIGHLIGHTS
+    </ForwardRef>
+    <div
+      key="0"
+    >
+      <div>
+        <span
+          style={
+            Object {
+              "fontWeight": "400",
+            }
+          }
+        >
+          Hot tub
+           · 
+        </span>
+        This is one of few homes in this area that has this feature.
+      </div>
+      <ForwardRef>
+        <ForwardRef
+          href="#"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "#898989",
+            }
+          }
+        >
+          Helpful
+          <ForwardRef
+            src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
+          />
+        </ForwardRef>
+        <span>
+          · 
+        </span>
+        <ForwardRef
+          href="#"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "#898989",
+            }
+          }
+        >
+          Not helpful
+        </ForwardRef>
+      </ForwardRef>
+    </div>
+    <div
+      key="1"
+    >
+      <div>
+        <span
+          style={
+            Object {
+              "fontWeight": "400",
+            }
+          }
+        >
+          Great value
+           · 
+        </span>
+        94% of recent guests gave this home’s value a 5-star rating.
+      </div>
+      <ForwardRef>
+        <ForwardRef
+          href="#"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "#898989",
+            }
+          }
+        >
+          Helpful
+          <ForwardRef
+            src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
+          />
+        </ForwardRef>
+        <span>
+          · 
+        </span>
+        <ForwardRef
+          href="#"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "#898989",
+            }
+          }
+        >
+          Not helpful
+        </ForwardRef>
+      </ForwardRef>
+    </div>
+  </ForwardRef>
+</ForwardRef>
 `;

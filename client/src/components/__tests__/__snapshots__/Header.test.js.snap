@@ -1,47 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render correctly with props 1`] = `
-<div>
+<ForwardRef>
   <ForwardRef>
-    Header
-  </ForwardRef>
-  <div>
-    EARTH HOUSE
-  </div>
-  <div>
-    Romantic Cabana
-  </div>
-  <div>
-    Mandalay, Myanmar
-  </div>
-  <img
-    src="https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg"
-  />
-  <div>
-    Michaelangelo
-  </div>
-  <CapacityBar
-    bathrooms={15}
-    beds={
-      Object {
-        "bedrooms": Array [
-          Array [
-            "floor mattress",
-            "king",
-            "twin",
-            "double",
-          ],
-          "queen",
-        ],
-        "commonSpace": Array [
-          "king",
-          "couch",
-          "queen",
-          "floor mattress",
-        ],
+    <ForwardRef
+      style={
+        Object {
+          "color": "#734f21",
+        }
       }
-    }
-    guests={9}
-  />
-</div>
+    >
+      earth house
+    </ForwardRef>
+    <ForwardRef>
+      Romantic Cabana
+    </ForwardRef>
+    <ForwardRef>
+      Mandalay, Myanmar
+    </ForwardRef>
+    <CapacityBar
+      bathrooms={15}
+      beds={
+        Object {
+          "bedrooms": Array [
+            Array [
+              "floor mattress",
+              "king",
+              "twin",
+              "double",
+            ],
+            "queen",
+          ],
+          "commonSpace": Array [
+            "king",
+            "couch",
+            "queen",
+            "floor mattress",
+          ],
+        }
+      }
+      guests={9}
+    />
+  </ForwardRef>
+  <ForwardRef>
+    <ForwardRef
+      id="ownerPic"
+      src="https://s3-us-west-1.amazonaws.com/betterbnb-description/person1.jpeg"
+    />
+    <ForwardRef>
+      Michaelangelo
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
 `;
