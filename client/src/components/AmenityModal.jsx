@@ -54,9 +54,13 @@ const imageUrls = {
 };
 
 const listAmenities = (list) => {
-  return list.map(amenity => {
-    return <div>{amenity}<SectionBreakLine /></div>
-  })
+  if (Array.isArray(list)) {
+    return list.map(amenity => {
+      return <div>{amenity}<SectionBreakLine /></div>
+    })
+  } else {
+    return <div>{list}<SectionBreakLine /></div>
+  }
 }
 
 const AmenityModal = ({ show, onClose, amenities }) => {
