@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PromoBar /> should render correctly with props 1`] = `
-<ForwardRef>
-  <ForwardRef>
-    <ForwardRef
+<PromoBar__StyledHighlightBlock>
+  <PromoBar__AdBox>
+    <PromoBar__StyledBulb
       src="https://a0.muscache.com/airbnb/static/page3/icon-uc-light-bulb-b34f4ddc543809b3144949c9e8cfcc8d.gif"
     />
     <div
@@ -18,14 +18,12 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
     <div>
       It’s been viewed 500+ times in the past week.
     </div>
-  </ForwardRef>
-  <ForwardRef>
-    <ForwardRef>
+  </PromoBar__AdBox>
+  <PromoBar__HighlightBox>
+    <PromoBar__HighlightTitle>
       HOME HIGHLIGHTS
-    </ForwardRef>
-    <div
-      key="0"
-    >
+    </PromoBar__HighlightTitle>
+    <div>
       <div>
         <span
           style={
@@ -39,22 +37,20 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
         </span>
         This is one of few homes in this area that has this feature.
       </div>
-      <ForwardRef>
+      <PromoBar__StyledLink>
         Helpful
-        <ForwardRef
+        <PromoBar__StyledThumb
           src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
         />
-      </ForwardRef>
+      </PromoBar__StyledLink>
       <span>
         · 
       </span>
-      <ForwardRef>
+      <PromoBar__StyledLink>
         Not helpful
-      </ForwardRef>
+      </PromoBar__StyledLink>
     </div>
-    <div
-      key="1"
-    >
+    <div>
       <div>
         <span
           style={
@@ -68,19 +64,19 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
         </span>
         94% of recent guests gave this home’s value a 5-star rating.
       </div>
-      <ForwardRef>
+      <PromoBar__StyledLink>
         Helpful
-        <ForwardRef
+        <PromoBar__StyledThumb
           src="https://s3-us-west-1.amazonaws.com/betterbnb-description/defaultHelpful.png"
         />
-      </ForwardRef>
+      </PromoBar__StyledLink>
       <span>
         · 
       </span>
-      <ForwardRef>
+      <PromoBar__StyledLink>
         Not helpful
-      </ForwardRef>
+      </PromoBar__StyledLink>
     </div>
-  </ForwardRef>
-</ForwardRef>
+  </PromoBar__HighlightBox>
+</PromoBar__StyledHighlightBlock>
 `;

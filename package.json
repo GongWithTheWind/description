@@ -8,7 +8,7 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "start-db": "mongod", 
+    "start-db": "mongod",
     "start": "nodemon ./server/index.js",
     "test": "jest && gulp lint",
     "seed": "mongoimport --db description --collection descriptions < ./seeds/descriptions.json --jsonArray"
@@ -63,7 +63,8 @@
     "jest-cli": "^23.6.0",
     "lorem-ipsum": "^1.0.6",
     "node-mongo-seeds": "^3.1.0",
-    "styled-components": "^4.0.0-beta.3-side-effect-test",
+    "prop-types": "^15.6.2",
+    "styled-components": "^3.4.8",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   },

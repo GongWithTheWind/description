@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Amenities /> should render correctly with props 1`] = `
-<ForwardRef>
+<Amenities__StyledAmenities>
   <div
     style={
       Object {
@@ -13,63 +13,63 @@ exports[`<Amenities /> should render correctly with props 1`] = `
   >
     Amenities
   </div>
-  <ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+  <Amenities__AmenitiesContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png"
       />
       <span>
         Wifi
       </span>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </Amenities__AmenityContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/fireplace.png"
       />
       <span>
         Fireplace
       </span>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </Amenities__AmenityContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/TV.png"
       />
       <span>
         TV
       </span>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </Amenities__AmenityContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png"
       />
       <span>
         Essentials (towels, bedsheets, soap, toilet paper, pillows)
       </span>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </Amenities__AmenityContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png"
       />
       <span>
         Shampoo
       </span>
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </Amenities__AmenityContainer>
+    <Amenities__AmenityContainer>
+      <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png"
       />
       <span>
         Parking
       </span>
-    </ForwardRef>
-  </ForwardRef>
-  <ForwardRef
+    </Amenities__AmenityContainer>
+  </Amenities__AmenitiesContainer>
+  <Amenities__ExpansionLink
     onClick={[Function]}
   >
     Show all 
     20
      amenities
-  </ForwardRef>
+  </Amenities__ExpansionLink>
   <AmenityModal
     amenities={
       Object {
@@ -104,5 +104,5 @@ exports[`<Amenities /> should render correctly with props 1`] = `
     onClose={[Function]}
     show={false}
   />
-</ForwardRef>
+</Amenities__StyledAmenities>
 `;
