@@ -75,9 +75,9 @@ const PromoBar = ({ miniAd, highlights }) => {
       </AdBox>
       <HighlightBox>
         <HighlightTitle>HOME HIGHLIGHTS</HighlightTitle>
-        {highlights.map((highlight) => {
+        {highlights.map((highlight, index) => {
           return (
-            <div>
+            <div key={index}>
               <div><span style={{'fontWeight': '400'}}>{highlight.title} &#183; </span>{highlight.description}</div>
               <StyledLink>Helpful<StyledThumb src={imageUrls.thumb}/></StyledLink>
               <span>&#183; </span>

@@ -67,13 +67,13 @@ const Bedroom = ({ bedroom, index }) => {
     <BedroomContainer>
       {Array(arrangement[1])
         .fill(imageUrls.doubleBed)
-        .map(image => {
-        return <StyledBed src={image}></StyledBed>
+        .map((image, j) => {
+        return <StyledBed src={image} key={j}></StyledBed>
       })}
       {Array(arrangement[2])
         .fill(imageUrls.singleBed)
-          .map(image => {
-        return <StyledBed src={image}></StyledBed>
+          .map((image, k) => {
+        return <StyledBed src={image} key={k}></StyledBed>
       })}
       <div style={title}>{arrangement[0]}</div>
       {(arrangement[1] > 0) ? 

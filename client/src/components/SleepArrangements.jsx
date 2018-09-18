@@ -113,7 +113,7 @@ class SleepArrangements extends React.Component {
           <Window>
             <Carousel style={shift}>
               {bedrooms.map((bedroom, index) => {
-                return <Bedroom bedroom={bedroom} index={index}/>
+                return <Bedroom bedroom={bedroom} index={index} key={index}/>
               })}
             </Carousel>
           </Window>
