@@ -89,7 +89,7 @@ class Contact extends React.Component {
 };
 
 Contact.propTypes = {
-  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool])),
+  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.bool])),
   contact: PropTypes.string
 };
 

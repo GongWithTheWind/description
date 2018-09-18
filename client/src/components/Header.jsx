@@ -72,13 +72,13 @@ const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }
 };
 
 Header.propTypes = {
-  propertyType: PropTypes.string,
-  name: PropTypes.string,
-  location: PropTypes.string,
-  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool])),
-  guests: PropTypes.number,
+  propertyType: PropTypes.array,
+  name: PropTypes.array,
+  location: PropTypes.array,
+  owner: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.bool])),
+  guests: PropTypes.array,
   beds: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array])),
-  bathrooms: PropTypes.number
+  bathrooms: PropTypes.array
 };
 
 Header.defaultProps = {
