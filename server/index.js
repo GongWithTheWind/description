@@ -4,7 +4,7 @@ const db = require("../database/index.js");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "./../client/dist/")));
+app.use(express.static(path.join(__dirname, "./../public/")));
 
 app.get("/descriptions/:homeId", (req, res) => {
   db.retrieve(req.params.homeId, (err, data) => {
