@@ -89,7 +89,16 @@ const randomize = (array, randomizeQuantity) => {
     let index = Math.floor(Math.random() * array.length);
     result.add(array[index]);
   }
+  if (result.size === 1) { return [...result][0]; }
   return [...result];
+}
+
+const makeArray = (value) => {
+  if (!Array.isArray(value)) {
+    return [value];
+  } else {
+    return value;
+  }
 }
 
 const generateRandomTextBlocks = () => {
@@ -112,13 +121,14 @@ const generateHouse = (homeId) => {
     location: randomize(locations),
     guests: randomize(guestQuantity),
     beds: {
-      bedrooms: randomize([randomize(beds, true), randomize(beds, true), randomize(beds, true), 
-        randomize(beds, true), randomize(beds, true), randomize(beds, true)], true),
-      commonSpace: randomize(beds, true)
+      bedrooms: randomize([makeArray(randomize(beds, true)), makeArray(randomize(beds, true)), 
+        makeArray(randomize(beds, true)), makeArray(randomize(beds, true)), 
+        makeArray(randomize(beds, true)), makeArray(randomize(beds, true))], true),
+      commonSpace: makeArray(randomize(beds, true))
     },
     bathrooms: randomize(bathroomQuantity),
     miniAd: randomize(miniAds),
-    highlights: randomize(highlights, true),
+    highlights: makeArray(randomize(highlights, true)),
     description: {
       general: generateRandomTextBlocks(),
       theSpace: generateRandomTextBlocks(),
@@ -127,10 +137,10 @@ const generateHouse = (homeId) => {
       otherThings: generateRandomTextBlocks()
     },
     amenities: {
-      basics: randomize(amenitySelection.basics, true),
-      facilities: randomize(amenitySelection.facilities, true),
-      dining: randomize(amenitySelection.dining, true),
-      safety: randomize(amenitySelection.safety)
+      basics: makeArray(randomize(amenitySelection.basics, true)),
+      facilities: makeArray(randomize(amenitySelection.facilities, true)),
+      dining: makeArray(randomize(amenitySelection.dining, true)),
+      safety: makeArray(randomize(amenitySelection.safety))
     },
     owner: {
       name: randomize(owners.name),

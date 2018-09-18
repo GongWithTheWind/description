@@ -63,18 +63,18 @@ const CapacityBar = ({ guests, beds, bathrooms }) => {
 };
 
 CapacityBar.propTypes = {
-  guests: PropTypes.array,
+  guests: PropTypes.number,
   beds: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.array])),
-  bathrooms: PropTypes.array
+  bathrooms: PropTypes.number
 };
 
 CapacityBar.defaultProps = {
-  guests: [0],
+  guests: 0,
   beds: {
     bedrooms: [],
     commonSpace: []
   },
-  bathrooms: [0]
+  bathrooms: 0
 };
 
 export default CapacityBar;

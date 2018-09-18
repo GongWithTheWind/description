@@ -70,8 +70,8 @@ const PromoBar = ({ miniAd, highlights }) => {
     <StyledHighlightBlock>
       <AdBox>
         <StyledBulb src={imageUrls.bulb}></StyledBulb>
-        <div style={{'fontWeight': '400'}}>{miniAd[0].title}</div>
-        <div>{miniAd[0].description}</div>
+        <div style={{'fontWeight': '400'}}>{miniAd.title}</div>
+        <div>{miniAd.description}</div>
       </AdBox>
       <HighlightBox>
         <HighlightTitle>HOME HIGHLIGHTS</HighlightTitle>
@@ -91,7 +91,7 @@ const PromoBar = ({ miniAd, highlights }) => {
 };
 
 PromoBar.propTypes = {
-  miniAd: PropTypes.array,
+  miniAd: PropTypes.objectOf(PropTypes.string),
   highlights: PropTypes.array
 };
 

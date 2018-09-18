@@ -77,8 +77,8 @@ class SleepArrangements extends React.Component {
       currentIndex: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
-    this.carouselSize = this.props.beds.bedrooms.length * 205;
-    this.minTranslateLimit = this.carouselSize > 615 ? 615 - this.carouselSize : 0;
+    this.carouselSize;
+    this.minTranslateLimit;
   }
 
   prevSlide() {
@@ -98,6 +98,8 @@ class SleepArrangements extends React.Component {
   }
 
   render() {
+    this.carouselSize = this.props.beds.bedrooms.length * 205;
+    this.minTranslateLimit = this.carouselSize > 615 ? 615 - this.carouselSize : 0;
     const shift = { 
       transform: `translate(${this.state.currentIndex}px)`,
       transition: `0.5s ease`

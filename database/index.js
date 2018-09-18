@@ -13,12 +13,12 @@ const descriptionSchema = new mongoose.Schema({
   name: String,
   property_type: String,
   location: String,
-  guests: Array,
+  guests: Number,
   beds: {
     bedrooms: Array,
     commonSpace: Array,
   },
-  bathrooms: Array,
+  bathrooms: Number,
   mini_ad: {
     title: String,
     description: String,
