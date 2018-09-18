@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> should render correctly with no props 1`] = `
-<app__ModuleContainer
+<App__ModuleContainer
   id="home"
 >
   <Header
@@ -445,7 +445,7 @@ Pariatur aliqua cupidatat cupidatat ad non. Cillum velit qui velit ad veniam con
     }
     propertyType="earth house"
   />
-  <app__SectionBreakLine />
+  <App__SectionBreakLine />
   <Amenities
     amenities={
       Object {
@@ -556,7 +556,7 @@ Pariatur aliqua cupidatat cupidatat ad non. Cillum velit qui velit ad veniam con
     }
     propertyType="earth house"
   />
-  <app__SectionBreakLine />
+  <App__SectionBreakLine />
   <SleepArrangements
     amenities={
       Object {
@@ -667,6 +667,6 @@ Pariatur aliqua cupidatat cupidatat ad non. Cillum velit qui velit ad veniam con
     }
     propertyType="earth house"
   />
-  <app__SectionBreakLine />
-</app__ModuleContainer>
+  <App__SectionBreakLine />
+</App__ModuleContainer>
 `;
