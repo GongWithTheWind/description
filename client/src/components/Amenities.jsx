@@ -103,9 +103,9 @@ class Amenities extends React.Component {
       <StyledAmenities>
         <div style={title}>Amenities</div>
         <AmenitiesContainer>
-          {icons.map(icon => {
+          {icons.map((icon, index) => {
             return(
-              <AmenityContainer>
+              <AmenityContainer key={index}>
                 <AmenityIcon src={icon[1]}></AmenityIcon>
                 <span>{capitalize(icon[0])}</span>
               </AmenityContainer>

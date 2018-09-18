@@ -55,8 +55,8 @@ const imageUrls = {
 
 const listAmenities = (list) => {
   if (Array.isArray(list)) {
-    return list.map(amenity => {
-      return <div>{amenity}<SectionBreakLine /></div>
+    return list.map((amenity, index) => {
+      return <div key={index}>{amenity}<SectionBreakLine /></div>
     })
   } else {
     return <div>{list}<SectionBreakLine /></div>

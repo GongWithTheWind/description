@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 // Additional features to implement:
 // List out type of bed for each bedroom, and beds for common space
-// Complete sleep arrangement carousel (update data to include >2 bedrooms max)
 
 const StyledSleepArrangements = styled.div`
   font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -18,17 +17,21 @@ const StyledSleepArrangements = styled.div`
 `;
 
 const Container = styled.div`
-  flex-basis: 700px;
   display: flex;
   flex-direction: row;
-  `;
+`;
+
+const Window = styled.div`
+  flex-basis: 630px;
+  overflow: hidden;
+`;
+// overflow: scroll for scrollable carousel
 
 const Carousel = styled.div`
   display: flex;
-  flex-basis: 550px;
+  width: fit-content;
   flex-direction: row;
   flex-grow: 1;
-  overflow: scroll;
 `;
 
 const ArrowButton = styled.button`
@@ -52,6 +55,7 @@ const RightArrow = styled.i`
   vertical-align: middle;
   transform: rotate(-45deg);
   flex-grow: 0;
+  z-index: 1;
   `;
 
 const LeftArrow = styled.i`
@@ -63,41 +67,56 @@ const LeftArrow = styled.i`
   vertical-align: middle;
   transform: rotate(135deg);
   flex-grow: 0;
+  z-index: 1;
 `;
 
 class SleepArrangements extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentIndex: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
+    this.carouselSize;
+    this.minTranslateLimit;
   }
 
   prevSlide() {
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1
-    }));
+    if (this.state.currentIndex < 0) {
+      this.setState(prevState => ({
+        currentIndex: prevState.currentIndex + 205
+      }));
+    }
   }
 
   nextSlide() {
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1
-    }));
+    if (this.state.currentIndex > this.minTranslateLimit && this.minTranslateLimit !== 0) {
+      this.setState(prevState => ({
+        currentIndex: prevState.currentIndex - 205
+      }));
+    }
   }
 
   render() {
+    this.carouselSize = this.props.beds.bedrooms.length * 205;
+    this.minTranslateLimit = this.carouselSize > 615 ? 615 - this.carouselSize : 0;
+    const shift = { 
+      transform: `translate(${this.state.currentIndex}px)`,
+      transition: `0.5s ease`
+    };
     const { beds:{ bedrooms, commonSpace } } = this.props;
     return(
       <StyledSleepArrangements>
         <div>Sleeping arrangements</div>
         <Container>
           <ArrowButton onClick={() => this.prevSlide()}><LeftArrow /></ArrowButton>
-          <Carousel>
-            {bedrooms.map((bedroom, index) => {
-              return <Bedroom bedroom={bedroom} index={index} />
-            })}
-          </Carousel>
+          <Window>
+            <Carousel style={shift}>
+              {bedrooms.map((bedroom, index) => {
+                return <Bedroom bedroom={bedroom} index={index} key={index}/>
+              })}
+            </Carousel>
+          </Window>
           <ArrowButton onClick={() => this.nextSlide()}><RightArrow /></ArrowButton>
         </Container>
       </StyledSleepArrangements>

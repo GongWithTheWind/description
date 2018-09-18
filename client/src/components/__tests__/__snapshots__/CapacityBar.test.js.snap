@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CapacityBar /> should render correctly with props 1`] = `
-<ForwardRef>
-  <ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+<CapacityBar__StyledCapacityBar>
+  <CapacityBar__PairContainer>
+    <CapacityBar__SingleContainer>
+      <CapacityBar__StyledIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/guests.png"
       />
       9 guests
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </CapacityBar__SingleContainer>
+    <CapacityBar__SingleContainer>
+      <CapacityBar__StyledIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bedrooms.png"
       />
       2 bedrooms
-    </ForwardRef>
-  </ForwardRef>
-  <ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </CapacityBar__SingleContainer>
+  </CapacityBar__PairContainer>
+  <CapacityBar__PairContainer>
+    <CapacityBar__SingleContainer>
+      <CapacityBar__StyledIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/beds.png"
       />
       9 beds
-    </ForwardRef>
-    <ForwardRef>
-      <ForwardRef
+    </CapacityBar__SingleContainer>
+    <CapacityBar__SingleContainer>
+      <CapacityBar__StyledIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/baths.png"
       />
       15 baths
-    </ForwardRef>
-  </ForwardRef>
-</ForwardRef>
+    </CapacityBar__SingleContainer>
+  </CapacityBar__PairContainer>
+</CapacityBar__StyledCapacityBar>
 `;

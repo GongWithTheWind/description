@@ -1,38 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SleepArrangements /> should render correctly with props 1`] = `
-<ForwardRef>
+<SleepArrangements__StyledSleepArrangements>
   <div>
     Sleeping arrangements
   </div>
-  <ForwardRef>
-    <ForwardRef
+  <SleepArrangements__Container>
+    <SleepArrangements__ArrowButton
       onClick={[Function]}
     >
-      <ForwardRef />
-    </ForwardRef>
-    <ForwardRef>
-      <Bedroom
-        bedroom={
-          Array [
-            "floor mattress",
-            "king",
-            "twin",
-            "double",
-          ]
+      <SleepArrangements__LeftArrow />
+    </SleepArrangements__ArrowButton>
+    <SleepArrangements__Window>
+      <SleepArrangements__Carousel
+        style={
+          Object {
+            "transform": "translate(0px)",
+            "transition": "0.5s ease",
+          }
         }
-        index={0}
-      />
-      <Bedroom
-        bedroom="queen"
-        index={1}
-      />
-    </ForwardRef>
-    <ForwardRef
+      >
+        <Bedroom
+          bedroom={
+            Array [
+              "floor mattress",
+              "king",
+              "twin",
+              "double",
+            ]
+          }
+          index={0}
+          key="0"
+        />
+        <Bedroom
+          bedroom="queen"
+          index={1}
+          key="1"
+        />
+      </SleepArrangements__Carousel>
+    </SleepArrangements__Window>
+    <SleepArrangements__ArrowButton
       onClick={[Function]}
     >
-      <ForwardRef />
-    </ForwardRef>
-  </ForwardRef>
-</ForwardRef>
+      <SleepArrangements__RightArrow />
+    </SleepArrangements__ArrowButton>
+  </SleepArrangements__Container>
+</SleepArrangements__StyledSleepArrangements>
 `;
