@@ -89,7 +89,6 @@ const randomize = (array, randomizeQuantity) => {
     let index = Math.floor(Math.random() * array.length);
     result.add(array[index]);
   }
-  if (result.size === 1) { return [...result][0]; }
   return [...result];
 }
 
