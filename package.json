@@ -10,7 +10,8 @@
     "react-dev": "webpack -d --watch",
     "start-db": "mongod",
     "start": "nodemon ./server/index.js",
-    "test": "jest && gulp lint",
+    "test": "jest",
+    "format": "gulp lint",
     "seed": "mongoimport --db description --collection descriptions < ./seeds/descriptions.json --jsonArray"
   },
   "jest": {
@@ -37,7 +38,8 @@
     "mongoose": "^5.2.13",
     "nodemon": "^1.18.4",
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "react-dom": "^16.5.0",
+    "styled-components": "^3.4.9"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -64,7 +66,6 @@
     "lorem-ipsum": "^1.0.6",
     "node-mongo-seeds": "^3.1.0",
     "prop-types": "^15.6.2",
-    "styled-components": "^3.4.8",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   },

@@ -23,7 +23,9 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
     <PromoBar__HighlightTitle>
       HOME HIGHLIGHTS
     </PromoBar__HighlightTitle>
-    <div>
+    <div
+      key="0"
+    >
       <div>
         <span
           style={
@@ -50,7 +52,9 @@ exports[`<PromoBar /> should render correctly with props 1`] = `
         Not helpful
       </PromoBar__StyledLink>
     </div>
-    <div>
+    <div
+      key="1"
+    >
       <div>
         <span
           style={

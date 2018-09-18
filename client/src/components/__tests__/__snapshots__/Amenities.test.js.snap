@@ -14,7 +14,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
     Amenities
   </div>
   <Amenities__AmenitiesContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="0"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/wifi.png"
       />
@@ -22,7 +24,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Wifi
       </span>
     </Amenities__AmenityContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="1"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/fireplace.png"
       />
@@ -30,7 +34,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Fireplace
       </span>
     </Amenities__AmenityContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="2"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/TV.png"
       />
@@ -38,7 +44,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         TV
       </span>
     </Amenities__AmenityContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="3"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/essentials.png"
       />
@@ -46,7 +54,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Essentials (towels, bedsheets, soap, toilet paper, pillows)
       </span>
     </Amenities__AmenityContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="4"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/shampoo.png"
       />
@@ -54,7 +64,9 @@ exports[`<Amenities /> should render correctly with props 1`] = `
         Shampoo
       </span>
     </Amenities__AmenityContainer>
-    <Amenities__AmenityContainer>
+    <Amenities__AmenityContainer
+      key="5"
+    >
       <Amenities__AmenityIcon
         src="https://s3-us-west-1.amazonaws.com/betterbnb-description/parking.png"
       />
