@@ -4,7 +4,6 @@ const db = require("../database/index.js");
 
 const app = express();
 
-console.log(__dirname);
 app.use("/:homeId", express.static(path.join(__dirname, "./../public/")));
 
 app.use(function(req, res, next) {
