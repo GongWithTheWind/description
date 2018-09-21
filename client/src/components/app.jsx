@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   getHome(homeId) {
-    fetch(`http://localhost:3002/descriptions/${homeId}`)
+    fetch(`/descriptions/${homeId}`)
       .then(response => {
         return response.json();
       })
