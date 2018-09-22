@@ -1,5 +1,5 @@
 // Betterbnb Description Module Data Generator
-
+// I was here
 const loremIpsum = require('lorem-ipsum');
 const fs = require('fs');
 
