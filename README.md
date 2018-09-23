@@ -65,3 +65,7 @@ npm run test
 
 ```
 
+## Link to Deployed Service
+
+http://betterbnbdescriptionserver-env.up4m7x289b.us-west-1.elasticbeanstalk.com/100/
+
