@@ -9,7 +9,7 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start-db": "mongod",
-    "start": "nodemon ./server/index.js",
+    "start": "nodemon server/index.js",
     "test": "jest",
     "format": "gulp lint",
     "seed": "mongoimport --db description --collection descriptions < ./seeds/descriptions.json --jsonArray"

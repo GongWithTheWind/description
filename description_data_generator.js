@@ -105,51 +105,49 @@ const generateRandomTextBlocks = () => {
   var numberOfParagraphs = Math.floor(1 + Math.random() * 3);
   return loremIpsum({
     count: numberOfParagraphs,
-    units: 'paragraphs',
+    units: "paragraphs",
     sentenceLowerBound: 3,
     sentenceUpperBound: 15,
-    format: 'plain',
-    random: Math.random
+    format: "plain",
+    random: Math.random,
   });
-}
+};
 
-const generateHouse = (homeId) => {
-  return {
-    homeId: homeId,
-    name: randomize(names),
-    propertyType: randomize(propertyTypes),
-    location: randomize(locations),
-    guests: randomize(guestQuantity),
-    beds: {
-      bedrooms: randomize([makeArray(randomize(beds, true)), makeArray(randomize(beds, true)), 
-        makeArray(randomize(beds, true)), makeArray(randomize(beds, true)), 
-        makeArray(randomize(beds, true)), makeArray(randomize(beds, true))], true),
-      commonSpace: makeArray(randomize(beds, true))
-    },
-    bathrooms: randomize(bathroomQuantity),
-    miniAd: randomize(miniAds),
-    highlights: makeArray(randomize(highlights, true)),
-    description: {
-      general: generateRandomTextBlocks(),
-      theSpace: generateRandomTextBlocks(),
-      guestAccess: generateRandomTextBlocks(),
-      interactionWithGuests: generateRandomTextBlocks(),
-      otherThings: generateRandomTextBlocks()
-    },
-    amenities: {
-      basics: makeArray(randomize(amenitySelection.basics, true)),
-      facilities: makeArray(randomize(amenitySelection.facilities, true)),
-      dining: makeArray(randomize(amenitySelection.dining, true)),
-      safety: makeArray(randomize(amenitySelection.safety))
-    },
-    owner: {
-      name: randomize(owners.name),
-      image: randomize(owners.image),
-      contact: randomize(owners.contact),
-      badge: randomize(owners.badge)
-    }
-  }
-}
+const generateHouse = homeId => ({
+  homeId,
+  name: randomize(names),
+  propertyType: randomize(propertyTypes),
+  location: randomize(locations),
+  guests: randomize(guestQuantity),
+  beds: {
+    bedrooms: randomize([makeArray(randomize(beds, true)), makeArray(randomize(beds, true)),
+      makeArray(randomize(beds, true)), makeArray(randomize(beds, true)),
+      makeArray(randomize(beds, true)), makeArray(randomize(beds, true))], true),
+    commonSpace: makeArray(randomize(beds, true)),
+  },
+  bathrooms: randomize(bathroomQuantity),
+  miniAd: randomize(miniAds),
+  highlights: makeArray(randomize(highlights, true)),
+  description: {
+    general: generateRandomTextBlocks(),
+    theSpace: generateRandomTextBlocks(),
+    guestAccess: generateRandomTextBlocks(),
+    interactionWithGuests: generateRandomTextBlocks(),
+    otherThings: generateRandomTextBlocks(),
+  },
+  amenities: {
+    basics: makeArray(randomize(amenitySelection.basics, true)),
+    facilities: makeArray(randomize(amenitySelection.facilities, true)),
+    dining: makeArray(randomize(amenitySelection.dining, true)),
+    safety: makeArray(randomize(amenitySelection.safety)),
+  },
+  owner: {
+    name: randomize(owners.name),
+    image: randomize(owners.image),
+    contact: randomize(owners.contact),
+    badge: randomize(owners.badge),
+  },
+});
 
 const generateHouses = (quantity, startIndex) => {
   let houses = [];
@@ -171,4 +169,6 @@ const generateDataFile = () => {
   });
 }
 
-generateDataFile();
+// generateDataFile();
+
+module.exports.generateHouse = generateHouse;
