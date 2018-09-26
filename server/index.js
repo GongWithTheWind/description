@@ -16,7 +16,19 @@ app.post("/descriptions", (req, res) => {
   db.getLatestHomeId((err, results) => {
     const { homeId } = results[0];
     db.saveHouse(homeId + 1, (error) => {
-      if (err) {
+      if (error) {
+        console.error(error);
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+app.delete("/descriptions/:homeId", (req, res) => {
+  db.getLatestHomeId((err, results) => {
+    const { homeId } = results[0];
+    db.removeHouse(homeId, (error) => {
+      if (error) {
         console.error(error);
       }
       res.sendStatus(200);

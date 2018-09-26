@@ -55,7 +55,6 @@ const Description = mongoose.model("Description", descriptionSchema);
 
 const retrieve = (homeId, callback) => {
   const query = { homeId };
-  console.log(query)
   Description.find(query)
     .exec((err, home) => {
       if (err) { callback(err); } else {
@@ -84,6 +83,16 @@ const getLatestHomeId = callback => (
   })
 );
 
+const removeHouse = (homeId, callback) => {
+  Description.deleteOne({ homeId }).exec((err, result) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null, result);
+  });
+};
+
 module.exports.retrieve = retrieve;
 module.exports.getLatestHomeId = getLatestHomeId;
 module.exports.saveHouse = saveHouse;
+module.exports.removeHouse = removeHouse;
