@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const data = require("../description_data_generator.js");
 
 mongoose.connect("mongodb://localhost/description", { useNewUrlParser: true });
 
@@ -9,9 +10,9 @@ db.once("open", () => {
 });
 
 const descriptionSchema = new mongoose.Schema({
-  home_id: Number,
+  homeId: Number,
   name: String,
-  property_type: String,
+  propertyType: String,
   location: String,
   guests: Number,
   beds: {
@@ -19,7 +20,7 @@ const descriptionSchema = new mongoose.Schema({
     commonSpace: Array,
   },
   bathrooms: Number,
-  mini_ad: {
+  miniAd: {
     title: String,
     description: String,
   },
@@ -53,13 +54,36 @@ const descriptionSchema = new mongoose.Schema({
 const Description = mongoose.model("Description", descriptionSchema);
 
 const retrieve = (homeId, callback) => {
-  const query = { homeId: Number(homeId) };
+  const query = { homeId };
+  console.log(query)
   Description.find(query)
-    .exec((err, data) => {
+    .exec((err, home) => {
       if (err) { callback(err); } else {
-        callback(null, data);
+        callback(null, home);
       }
     });
 };
 
+const saveHouse = (homeId, callback) => {
+  const house = data.generateHouse(homeId);
+  const newHouse = new Description(house);
+  newHouse.save((err, result) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null, result);
+  });
+};
+
+const getLatestHomeId = callback => (
+  Description.find({}).sort({ homeId: "descending" }).limit(1).exec((err, results) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null, results);
+  })
+);
+
 module.exports.retrieve = retrieve;
+module.exports.getLatestHomeId = getLatestHomeId;
+module.exports.saveHouse = saveHouse;

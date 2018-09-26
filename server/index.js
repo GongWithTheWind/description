@@ -6,14 +6,27 @@ const app = express();
 
 app.use("/:homeId", express.static(path.join(__dirname, "./../public/")));
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
+app.post("/descriptions", (req, res) => {
+  db.getLatestHomeId((err, results) => {
+    const { homeId } = results[0];
+    db.saveHouse(homeId + 1, (error) => {
+      if (err) {
+        console.error(error);
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
 app.get("/descriptions/:homeId", (req, res) => {
-  db.retrieve(req.params.homeId, (err, data) => {
+  const homeId = Number(req.params.homeId);
+  db.retrieve(homeId, (err, data) => {
     if (err) {
       res.send(err);
     } else {
