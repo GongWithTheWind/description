@@ -2,6 +2,8 @@
 // I was here
 const loremIpsum = require('lorem-ipsum');
 const fs = require('fs');
+const path = require('path');
+const async = require('async');
 
 // Media url paths
 const media = {
@@ -102,12 +104,12 @@ const makeArray = (value) => {
 }
 
 const generateRandomTextBlocks = () => {
-  var numberOfParagraphs = Math.floor(1 + Math.random() * 3);
+  var numberOfParagraphs = Math.floor(1 + Math.random() * 1);
   return loremIpsum({
     count: numberOfParagraphs,
     units: "paragraphs",
-    sentenceLowerBound: 3,
-    sentenceUpperBound: 15,
+    sentenceLowerBound: 1,
+    sentenceUpperBound: 1,
     format: "plain",
     random: Math.random,
   });
@@ -150,25 +152,48 @@ const generateHouse = homeId => ({
 });
 
 const generateHouses = (quantity, startIndex) => {
-  let houses = [];
+  const houses = [];
   for (let i = startIndex; i < startIndex + quantity; i++) {
     houses.push(generateHouse(i));
   }
   return houses;
-}
-
-// Generate data and data file
-const data = generateHouses(100, 100);
+};
 
 const generateDataFile = () => {
-  fs.writeFile(__dirname + '/seeds/descriptions.json', JSON.stringify(data), 'utf8', (err) => {
+  fs.writeFile(__dirname + "/seeds/data.json", JSON.stringify(data), "utf8", (err) => {
     if (err) { console.log(err); }
     else {
-      console.log('Data file created.');
+      console.log("Data file created.");
     }
   });
-}
+};
 
-// generateDataFile();
+const generateFiles = (n, start, cb) => {
+  let quantity = 100000;
+  let end = n + 4;
+  while (n < end) {
+    const houses = generateHouses(quantity, start);
+    fs.writeFileSync(path.join(__dirname, `/seeds/${n}.json`), JSON.stringify(houses));
+    delete houses;
+    n += 1;
+    quantity += 100000;
+    start += 1000000;
+  }
+  cb(console.log('done with', n + 3));
+};
+
+
+console.time('timer');
+async.parallel([
+  function(cb) {
+    generateFiles(1, 1, cb);
+  },
+  function(cb) {
+    generateFiles(5, 41, cb);
+  },
+  () => {console.log('done with all')}
+]);
+
+console.timeEnd('timer');
 
 module.exports.generateHouse = generateHouse;
