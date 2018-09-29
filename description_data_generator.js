@@ -2,6 +2,8 @@
 // I was here
 const loremIpsum = require('lorem-ipsum');
 const fs = require('fs');
+const path = require('path');
+const async = require('async');
 
 // Media url paths
 const media = {
@@ -15,14 +17,14 @@ const media = {
 }
 
 // Data Selection
-const names = ['Quaint home by the Sea', 'Romantic Cabana', 'Designer Loft', 'Dream Getaway', 'Modern, chic home'];
+const names = ['Quaint home by the Sea', 'Romantic Cabana', 'Designer Loft', 'Dream Getaway', 'Modern home'];
 
 const propertyTypes = ['house', 'bungalow', 'cabin', 'casa particular', 
   'chalet', 'cottage', 'cycladic house', 'dammuso', 'dome house', 'earth house', 
-  'farmstay', 'house boat', 'hut', 'lighthouse', 'pension', 'shepherd’s hut', 
+  'farmstay', 'house boat', 'hut', 'lighthouse', 'pension', 'shepherd hut', 
   'tiny house', 'townhouse', 'trullo', 'villa'];
 
-const locations = ['Kansas, USA', 'Cordoba, Argentina', 'Mandalay, Myanmar', 'Nagpur, India', 'Chungdu, China'];
+const locations = ['Kansas-USA', 'Cordoba-Argentina', 'Mandalay-Myanmar', 'Nagpur-India', 'Chungdu-China'];
 
 const guestQuantity = [];
 for (let i = 1; i <= 16; i++) {
@@ -53,7 +55,6 @@ const highlights = [
 
 const amenitySelection = {
   basics: [
-    'essentials (towels, bedsheets, soap, toilet paper, pillows)',
     'wifi',
     'shampoo',
     'closet/drawers',
@@ -102,12 +103,12 @@ const makeArray = (value) => {
 }
 
 const generateRandomTextBlocks = () => {
-  var numberOfParagraphs = Math.floor(1 + Math.random() * 3);
+  var numberOfParagraphs = Math.floor(1 + Math.random() * 1);
   return loremIpsum({
     count: numberOfParagraphs,
     units: "paragraphs",
-    sentenceLowerBound: 3,
-    sentenceUpperBound: 15,
+    sentenceLowerBound: 1,
+    sentenceUpperBound: 1,
     format: "plain",
     random: Math.random,
   });
@@ -150,25 +151,147 @@ const generateHouse = homeId => ({
 });
 
 const generateHouses = (quantity, startIndex) => {
-  let houses = [];
+  const houses = [];
   for (let i = startIndex; i < startIndex + quantity; i++) {
     houses.push(generateHouse(i));
+    console.log(i)
   }
   return houses;
-}
-
-// Generate data and data file
-const data = generateHouses(100, 100);
+};
 
 const generateDataFile = () => {
-  fs.writeFile(__dirname + '/seeds/descriptions.json', JSON.stringify(data), 'utf8', (err) => {
+  fs.writeFile(__dirname + "/seeds/data.json", JSON.stringify(data), "utf8", (err) => {
     if (err) { console.log(err); }
     else {
-      console.log('Data file created.');
+      console.log("Data file created.");
     }
   });
-}
+};
 
-// generateDataFile();
+const generateFiles = (n, start, cb) => {
+  let quantity = 100000;
+  let end = n + 4;
+  while (n < end) {
+    const houses = generateHouses(quantity, start);
+    fs.writeFileSync(path.join(__dirname, `/seeds/${n}.json`), JSON.stringify(houses));
+    delete houses;
+    n += 1;
+    quantity += 100000;
+    start += 100000;
+  }
+  cb(console.log('done with', n + 3));
+};
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 5000001));
+// fs.writeFile(path.join(__dirname, "/seeds/11.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 11 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 5500001));
+// fs.writeFile(path.join(__dirname, "/seeds/12.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 12 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 6000001));
+// fs.writeFile(path.join(__dirname, "/seeds/13.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 13 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 6500001));
+// fs.writeFile(path.join(__dirname, "/seeds/14.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 14 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 7000001));
+// fs.writeFile(path.join(__dirname, "/seeds/15.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 15 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 7500001));
+// fs.writeFile(path.join(__dirname, "/seeds/16.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 16 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 8000001));
+// fs.writeFile(path.join(__dirname, "/seeds/17.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 17 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 8500001));
+// fs.writeFile(path.join(__dirname, "/seeds/18.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 18 saved")
+//   console.timeEnd('timer');
+// });
+
+// console.time('timerr');
+// var data = JSON.stringify(generateHouses(500000, 9000001));
+// fs.writeFile(path.join(__dirname, "/seeds/19.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 19 saved")
+//   console.timeEnd('timerr');
+// });
+
+// console.time('timer');
+// var data = JSON.stringify(generateHouses(500000, 9500001));
+// fs.writeFile(path.join(__dirname, "/seeds/20.json"), data, (err, result) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log("file 20 saved")
+//   console.timeEnd('timer');
+// });
+
+
 
 module.exports.generateHouse = generateHouse;
