@@ -119,50 +119,60 @@ const generateRandomTextBlocks = () => {
   });
 };
 
+const getRandomInt = (min, max) => {
+  const low = Math.ceil(min);
+  const high = Math.floor(max);
+  return Math.floor(Math.random() * (high - low)) + low;
+};
+
 const generateHouse = (homeId) => {
   const house = [];
-  house.push(homeId);
   house.push(randomize(bathroomQuantity));
-  house.push(randomize(owners.contact));
   house.push(generateRandomTextBlocks());
   house.push(generateRandomTextBlocks());
   house.push(randomize(guestQuantity));
   house.push(randomize(highlightDescriptions));
   house.push(randomize(highlightTitles));
-  house.push(randomize(owners.image));
   house.push(generateRandomTextBlocks());
   house.push(randomize(locations));
   house.push(randomize(names));
   house.push(generateRandomTextBlocks());
-  house.push(randomize(owners.name));
   house.push(randomize(propertyTypes));
   house.push(generateRandomTextBlocks());
+  house.push(getRandomInt(1, 1000001));
   return house;
 };
 
-const generateHouses = (quantity, startIndex) => {
+const generateHouses = (quantity) => {
   const houses = [];
-  for (let i = startIndex; i < startIndex + quantity; i++) {
+  for (let i = 0; i < quantity; i += 1) {
     houses.push(generateHouse(i));
     console.log(i);
   }
   return houses;
 };
 
-const generateCSVFiles = (quantity, start) => {
-  const houses = generateHouses(quantity, start);
+const generateCSVFiles = (quantity, count = 0) => {
+  if (count === 10) {
+    return;
+  }
+  let houses = generateHouses(quantity);
   const options = { quote: "'", quotedString: true };
   stringify(houses, options, (err, output) => {
-    fs.writeFile(`/Users/tinhkle/cassandra/mockData/${start}.csv`, output, (err) => {
+    fs.appendFile(path.join(__dirname, "/seeds/postgres/data2.csv"), output, (err) => {
       if (err) {
         console.error(err);
         return;
       }
-      console.log(`${(quantity + start) - 1} files written`);
+      console.log(`${quantity} files written`);
+      houses = null;
+      output = null;
+      generateCSVFiles(quantity, count + 1);
     });
   });
 };
-// generateCSVFiles(1000000, 1);
+
+generateCSVFiles(500000);
 // generateCSVFiles(1000000, 1000001);
 // generateCSVFiles(1000000, 2000001);
 // generateCSVFiles(1000000, 3000001);
