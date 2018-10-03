@@ -16,8 +16,23 @@
 1. [Development](#development)
 
 ## Usage
+1. Create
+To post an additional listing:
+/descriptions
 
-> Some usage instructions
+2. Read
+To get a specific listing:
+/descriptions/:homeid
+
+3. Update 
+To update a specific listing
+/descriptions/:homeid
+
+4. Delete
+To delete a specific listing
+/descriptions/:homeid
+
+
 
 ## Requirements
 

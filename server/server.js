@@ -11,6 +11,14 @@ client.connect((err) => {
   console.log("cassandra connected");
 });
 
+const query = "select * from houses where homeid = ?";
+const value = [10000000];
+
+client.execute(query, value, { prepare: true })
+  .then(result => {
+  	console.log(`House with homeid ${value[0]}`, result.rows[0]);
+  });
+
 app.listen(3000, () => {
   console.log("listening at 3000");
 });
