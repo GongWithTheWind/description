@@ -24,4 +24,6 @@ coverage
 build/
 dist/
 seeds/
+database/config.js
+public/bundle.js
 

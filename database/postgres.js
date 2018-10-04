@@ -1,12 +1,11 @@
-const pg = require("pg");
+const { Client } = require("pg");
+const postgresConfig = require("./config");
 
-const connectionString = "postgres://localhost:5432/postgres";
+const client = new Client(postgresConfig);
 
-const client = new pg.Client(connectionString);
 client.connect((err) => {
   if (err) {
-    console.log(err);
-    return;
+    console.error(err);
   }
   console.log("postgres database connected");
 });
