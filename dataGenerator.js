@@ -173,14 +173,5 @@ const generateCSVFiles = (quantity, count = 0) => {
 };
 
 generateCSVFiles(500000);
-// generateCSVFiles(1000000, 1000001);
-// generateCSVFiles(1000000, 2000001);
-// generateCSVFiles(1000000, 3000001);
-// generateCSVFiles(1000000, 4000001);
-// generateCSVFiles(1000000, 5000001);
-// generateCSVFiles(1000000, 6000001);
-// generateCSVFiles(1000000, 7000001);
-// generateCSVFiles(1000000, 8000001);
-// generateCSVFiles(1000000, 9000001);
 
 module.exports.generateHouse = generateHouse;

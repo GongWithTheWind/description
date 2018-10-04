@@ -40,7 +40,7 @@ class App extends React.Component {
         return response.json();
       })
       .then(results => {
-        this.setState({ home: results[0] });
+        this.setState({ home: results });
       });
   }
 

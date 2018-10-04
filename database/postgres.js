@@ -11,18 +11,16 @@ client.connect((err) => {
   console.log("postgres database connected");
 });
 
-const results = [];
+const getListing = (homeId, callback) => {
+  const query = "select * from descriptions.listings inner join descriptions.owners on descriptions.listings.owner_id = descriptions.owners.owner_id where descriptions.listings.listings_id = $1;";
+  const value = [homeId];
+  client.query(query, value, (err, res) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, res);
+    }
+  });
+};
 
-const queryString = "select * from descriptions where homeid = 4000000";
-console.time('timer')
-const query = client.query(queryString);
-query.on("row", (row) => {
-  results.push(row);
-})
-query.on("end", () => {
-
-
-  console.log("successful query");
-  console.log(results[0].homeid);
-  console.timeEnd('timer');
-})
+module.exports.getListing = getListing;
