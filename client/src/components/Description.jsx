@@ -55,6 +55,23 @@ class Description extends React.Component {
 
   render() {
     const { description } = this.props;
+    const removeQuotes = (string) => {
+    return string.slice(1, string.length - 1);
+  };
+  const hasQuotes = (item) => {
+    if (item.includes("'")) {
+      return true;
+    }
+  };
+  if (hasQuotes(description.general)) {
+    description.general = removeQuotes(description.general);
+  }
+  if (hasQuotes(description.theSpace)) {
+    description.theSpace = removeQuotes(description.theSpace);
+  }
+  if (hasQuotes(description.guestAccess)) {
+    description.guestAccess = removeQuotes(description.guestAccess);
+  }
     if (this.state.showText) {
       return(
         <DescriptionBox>

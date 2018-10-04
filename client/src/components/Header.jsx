@@ -52,6 +52,23 @@ const StyledImage = styled.img`
 `;
 
 const Header = ({ propertyType, name, location, owner, guests, beds, bathrooms }) => {
+  const removeQuotes = (string) => {
+    return string.slice(1, string.length - 1);
+  };
+  const hasQuotes = (item) => {
+    if (item.includes("'")) {
+      return true;
+    }
+  };
+  if (hasQuotes(name)) {
+    name = removeQuotes(name);
+  }
+  if (hasQuotes(location)) {
+    location = removeQuotes(location);
+  }
+  if (hasQuotes(propertyType)) {
+    propertyType = removeQuotes(propertyType);
+  }
   return(
     <StyledHeader>
 

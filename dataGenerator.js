@@ -1,7 +1,6 @@
 const loremIpsum = require("lorem-ipsum");
 const fs = require("fs");
 const path = require("path");
-const async = require("async");
 const stringify = require("csv-stringify");
 
 // Media url paths
@@ -23,7 +22,7 @@ const propertyTypes = ["house", "bungalow", "cabin", "casa particular",
   "farmstay", "house boat", "hut", "lighthouse", "pension", "shepherd hut", 
   "tiny house", "townhouse", "trullo", "villa"];
 
-const locations = ["Kansas-USA", "Cordoba-Argentina", "Mandalay-Myanmar", "Nagpur-India", "Chungdu-China"];
+const locations = ["Kansas, USA", "Cordoba, Argentina", "Mandalay, Myanmar", "Nagpur, India", "Chungdu, China"];
 
 const guestQuantity = [];
 for (let i = 1; i <= 16; i += 1) {
@@ -125,7 +124,7 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (high - low)) + low;
 };
 
-const generateHouse = (homeId) => {
+const generateHouse = () => {
   const house = [];
   house.push(randomize(bathroomQuantity));
   house.push(generateRandomTextBlocks());
@@ -138,7 +137,6 @@ const generateHouse = (homeId) => {
   house.push(randomize(names));
   house.push(generateRandomTextBlocks());
   house.push(randomize(propertyTypes));
-  house.push(generateRandomTextBlocks());
   house.push(getRandomInt(1, 1000001));
   return house;
 };
@@ -171,7 +169,5 @@ const generateCSVFiles = (quantity, count = 0) => {
     });
   });
 };
-
-generateCSVFiles(500000);
 
 module.exports.generateHouse = generateHouse;

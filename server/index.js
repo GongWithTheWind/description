@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
-const db = require("../database/postgres.js");
+const controllers = require("./controllers/descriptions");
 
 const app = express();
 
-app.use("/:homeId", express.static(path.join(__dirname, "../public/")));
+app.use("/:homeId", express.static(path.join(__dirname, "../public")));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -12,38 +12,32 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.post("/descriptions", (req, res) => {
-//   db.getLatestHomeId((err, results) => {
-//     const { homeId } = results[0];
-//     db.saveHouse(homeId + 1, (error) => {
-//       if (error) {
-//         console.error(error);
-//       }
-//       res.sendStatus(200);
-//     });
-//   });
-// });
+app.post("/descriptions", (req, res) => {
+  controllers.postListing((err) => {
+    if (err) {
+      res.sendStatus(404);
+    }
+    res.sendStatus(200);
+  });
+});
 
-// app.delete("/descriptions/:homeId", (req, res) => {
-//   db.getLatestHomeId((err, results) => {
-//     const { homeId } = results[0];
-//     db.removeHouse(homeId, (error) => {
-//       if (error) {
-//         console.error(error);
-//       }
-//       res.sendStatus(200);
-//     });
-//   });
-// });
+app.delete("/descriptions/:listingId", (req, res) => {
+  const listingId = Number(req.params.listingId);
+  controllers.removeListing(listingId, (err) => {
+    if (err) {
+      res.sendStatus(400);
+    }
+    res.sendStatus(200);
+  });
+});
 
 app.get("/descriptions/:homeId", (req, res) => {
   const homeId = Number(req.params.homeId);
-  db.getListing(homeId, (err, result) => {
+  controllers.getListing(homeId, (err, result) => {
     if (err) {
-      res.send(err);
+      res.sendStatus(404);
     } else {
       const {
-        name,
         bathroom_quantity,
         general,
         guest_access,
@@ -52,13 +46,15 @@ app.get("/descriptions/:homeId", (req, res) => {
         highlight_title,
         guest_interactions,
         location,
+        name,
         space_information,
         property_type,
+        owner_name,
         contact,
         image,
       } = result.rows[0];
       const data = {
-        name: "Quaint home near the sea",
+        name,
         propertyType: property_type,
         location,
         guests: guest_quantity,
@@ -87,7 +83,7 @@ app.get("/descriptions/:homeId", (req, res) => {
           dining: ["coffee/tea", "breakfast", "pizza oven"],
         },
         owner: {
-          name,
+          name: owner_name,
           contact,
           image,
         },

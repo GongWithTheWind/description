@@ -66,6 +66,20 @@ const imageUrls = {
 };
 
 const PromoBar = ({ miniAd, highlights }) => {
+  const removeQuotes = (string) => {
+    return string.slice(1, string.length - 1);
+  };
+  const hasQuotes = (item) => {
+    if (item.includes("'")) {
+      return true;
+    }
+  };
+  if (hasQuotes(highlights[0].title)) {
+    highlights[0].title = removeQuotes(highlights[0].title);
+  }
+  if (hasQuotes(highlights[0].description)) {
+    highlights[0].description = removeQuotes(highlights[0].description);
+  }
   return(
     <StyledHighlightBlock>
       <AdBox>
