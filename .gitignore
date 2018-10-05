@@ -26,4 +26,5 @@ dist/
 seeds/
 database/config.js
 public/bundle.js
+newrelicConfig.js
 
