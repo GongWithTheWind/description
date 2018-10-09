@@ -27,4 +27,5 @@ seeds/
 database/config.js
 public/bundle.js
 newrelicConfig.js
+hello.yml
 

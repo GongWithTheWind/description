@@ -1,13 +1,6 @@
-const { Client } = require("pg");
+const { Pool } = require("pg");
 const postgresConfig = require("./config");
 
-const client = new Client(postgresConfig);
+const pool = new Pool(postgresConfig);
 
-client.connect((err) => {
-  if (err) {
-    console.error(err);
-  }
-  console.log("postgres database connected");
-});
-
-module.exports = client;
+module.exports = pool;
