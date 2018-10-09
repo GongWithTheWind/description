@@ -1,0 +1,30 @@
+config:
+  target: "http://localhost:3002"
+  phases:
+    - duration: 10
+      arrivalRate: 1000
+      name: "Phase 1 - 1 RPS"
+scenarios:
+  - flow:
+    - post:
+        url: "/descriptions"
+    # - post: 
+    #     url: "/descriptions"
+    # - post:
+    #     url: "/descriptions"
+    # - post: 
+    #     url: "/descriptions"
+    # - post:
+    #     url: "/descriptions"
+    # - post:
+    #     url: "/descriptions"
+    # - post: 
+    #     url: "/descriptions"
+    # - post:
+    #     url: "/descriptions"
+    # - post: 
+    #     url: "/descriptions"
+    # - post:
+    #     url: "/descriptions"
+
+
