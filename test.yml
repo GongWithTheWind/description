@@ -6,8 +6,8 @@ config:
       name: "Phase 1 - 1 RPS"
 scenarios:
   - flow:
-    - post:
-        url: "/descriptions"
+    - get:
+        url: "/descriptions/10000000"
     # - post: 
     #     url: "/descriptions"
     # - post:
