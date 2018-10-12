@@ -4,34 +4,22 @@ const postgres = require("../../database/postgres");
 exports.getListing = (homeId, callback) => {
   const query = "select * from descriptions.listings inner join descriptions.owners on descriptions.listings.owner_id = descriptions.owners.owner_id where descriptions.listings.listings_id = $1;";
   const value = [homeId];
-  postgres.connect((err, client, release) => {
-    if (err) {
-      return console.error(err);
+  postgres.query(query, value, (error, result) => {
+    if (error) {
+      callback(error);
     }
-    client.query(query, value, (error, result) => {
-      release();
-      if (error) {
-        callback(error);
-      }
-      callback(null, result);
-    });
+    callback(null, result);
   });
 };
 
 exports.postListing = (callback) => {
   const query = "insert into descriptions.listings (bathroom_quantity, general, guest_access, guest_quantity, highlight_description, highlight_title, guest_interactions, location, name, space_information, property_type, owner_id) values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)";
   const newListing = data.generateHouse();
-  postgres.connect((err, client, release) => {
-    if (err) {
-      return console.error(err);
+  postgres.query(query, newListing, (error, result) => {
+    if (error) {
+      callback(error);
     }
-    client.query(query, newListing, (error, result) => {
-      release();
-      if (error) {
-        callback(error);
-      }
-      callback(null, result);
-    });
+    callback(null, result);
   });
 };
 

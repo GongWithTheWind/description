@@ -23,7 +23,6 @@ coverage
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
 dist/
-seeds/
 database/config.js
 public/bundle.js
 newrelicConfig.js

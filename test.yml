@@ -2,7 +2,7 @@ config:
   target: "http://localhost:3002"
   phases:
     - duration: 10
-      arrivalRate: 200
+      arrivalRate: 100
       name: "Phase 1 - 1 RPS"
 scenarios:
   - flow:
